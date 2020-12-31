@@ -8,7 +8,7 @@
     "test": "jest",
     "check": "svelte-check",
     "validate": "run-p format test check",
-    "format": "prettier --write --no-semi --svelte-sort-order scripts-markup-styles ./**/*.{svelte,js,ts}",
+    "format": "prettier --write --no-semi --svelte-sort-order scripts-markup-styles ./src/",
     "dev": "rollup -c -w & jest -u --watchAll"
   },
   "devDependencies": {
@@ -38,7 +38,8 @@
   "dependencies": {
     "fancy-date": "^0.4.0",
     "sirv-cli": "^1.0.10",
-    "tslib": "^2.0.3"
+    "tslib": "^2.0.3",
+    "ua-parser-js": "^0.7.23"
   },
   "jest": {
     "transform": {
