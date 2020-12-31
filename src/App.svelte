@@ -1,10 +1,14 @@
 <script lang="ts">
   import { Calendar } from "fancy-date/lib/sample"
-
-  Calendar.平気法
+  import { SafeAreaBox, ViewBox, ZoomBox } from "./lib/area"
+  import HeadViewport from "./lib/HeadViewport.svelte"
+  import SafeArea from "./lib/SafeArea.svelte"
 
   export let name: string
 
+  let c = 0
+  let f = 32
+  let news = [""]
   let count = 0
   let rest = "th"
   let color = "black"
@@ -17,12 +21,26 @@
     color = "gray"
   }
 
+  setTimeout(() => {
+    news = Calendar.平気法
+      .format(
+        new Date().getTime(),
+        "Gy年Mod日 Homo Hrmr ao ar Ao Ar Eo Er Fo Fr No Nr Zo Zr"
+      )
+      .split(" ")
+  }, 2000)
+
+  function resize() {
+    console.warn("reaize!", ViewBox, ZoomBox, SafeAreaBox)
+  }
+
+  function scroll() {
+    console.warn("scroll!", ViewBox, ZoomBox, SafeAreaBox)
+  }
+
   function handleClick() {
     count++
   }
-
-  let c = 0
-  let f = 32
 
   function byC(str: string) {
     c = +str
@@ -37,6 +55,9 @@
 
 <main>
   <h1>Hello {name}!</h1>
+  <p>
+    {@html news.join('<br />')}
+  </p>
   <p>
     Visit the
     <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
@@ -56,6 +77,8 @@
     }
   </style>
 </main>
+<SafeArea {resize} {scroll} />
+<HeadViewport max={2} />
 
 <style lang="scss">
   main {

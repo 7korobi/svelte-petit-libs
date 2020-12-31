@@ -12,10 +12,15 @@ Object {
       "ctx": Array [
         "world",
         0,
-        "th",
-        "blue",
         0,
         32,
+        Array [
+          "",
+        ],
+        "th",
+        "blue",
+        [Function],
+        [Function],
         [Function],
         [Function],
         [Function],
@@ -50,7 +55,9 @@ Object {
     "$capture_state": [Function],
     "$inject_state": [Function],
   },
-  "container": <body>
+  "container": <body
+    style="--safe-area-width: 1px; --safe-area-height: 1px; --safe-area-top: 0px; --safe-area-right: 0px; --safe-area-bottom: 0px; --safe-area-left: 0px; --view-width: 1px; --view-height: 1px; --zoom-width: 1px; --zoom-height: 1px; --zoom-in: 1; --zoom-out: 1; --zoom-top: 0px; --zoom-right: 0px; --zoom-bottom: 0px; --zoom-left: 0px;"
+  >
     <div>
       <main
         class="svelte-r84n57"
@@ -62,6 +69,8 @@ Object {
           world
           !
         </h1>
+         
+        <p />
          
         <p>
           Visit the
@@ -104,6 +113,12 @@ Object {
     }
         </style>
       </main>
+       
+       
+      <div
+        class="svelte-pq94x5"
+      />
+       
     </div>
   </body>,
   "debug": [Function],
