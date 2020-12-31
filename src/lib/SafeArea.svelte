@@ -3,16 +3,16 @@
   import { isIOS, isRadius, isLegacy } from "./device"
   import ViewArea from "./ViewArea.svelte"
 
-  export const ratio = 1.0
-  export const isDefaultSafeArea = true
-
-  export let resize: { (): void } | undefined
-  export let scroll: { (): void } | undefined
-
   const MINIMUM_PIXEL_SIZE = 0.2
   const SAFE_WIDTH = 44
   const SAFE_HEIGHT = 21
   const { style } = document.body
+
+  export let ratio = 1.0
+  export let isDefaultSafeArea = true
+
+  export let resize: { (): void } | undefined
+  export let scroll: { (): void } | undefined
 
   let measure: HTMLDivElement
   let [st, sr, sb, sl] = SafeAreaBox.offset

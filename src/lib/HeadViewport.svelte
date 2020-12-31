@@ -1,6 +1,6 @@
 <script lang="ts">
-  export const min = 1.0
-  export const max = 1.0
+  export let min = 1.0
+  export let max = 1.0
 
   let viewport_content = [
     "viewport-fit=cover",

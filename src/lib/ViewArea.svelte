@@ -3,10 +3,10 @@
   import { ViewBox, ZoomBox, setResize, setScroll } from "./area"
   import { onMount, onDestroy } from "svelte"
 
+  const { style } = document.body
+
   export let resize: { (): void } | undefined
   export let scroll: { (): void } | undefined
-
-  const { style } = document.body
 
   let [vw, vh] = ViewBox.size
   let [zw, zh] = ZoomBox.size
@@ -29,14 +29,14 @@
 
   if (!isLegacy) {
     onMount(() => {
-      if (resize) window.visualViewport.addEventListener("resize", onResizeBare)
-      if (scroll) window.visualViewport.addEventListener("scroll", onScrollBare)
+      resize && window.visualViewport.addEventListener("resize", onResizeBare)
+      scroll && window.visualViewport.addEventListener("scroll", onScrollBare)
     })
 
     onDestroy(() => {
-      if (resize)
+      resize &&
         window.visualViewport.removeEventListener("resize", onResizeBare)
-      if (scroll)
+      scroll &&
         window.visualViewport.removeEventListener("scroll", onScrollBare)
     })
   }
