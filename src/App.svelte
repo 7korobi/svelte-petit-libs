@@ -3,15 +3,20 @@
   import { SafeAreaBox, ViewBox, ZoomBox } from "./lib/area"
   import HeadViewport from "./lib/HeadViewport.svelte"
   import SafeArea from "./lib/SafeArea.svelte"
+  import KeyBoard from "./lib/KeyBoard.svelte"
+  import FullScreen from "./lib/FullScreen.svelte"
+  import Poll from "./lib/Poll.svelte"
 
   export let name: string
 
+  let fs
   let c = 0
   let f = 32
   let news = [""]
   let count = 0
   let rest = "th"
   let color = "black"
+  let data = []
 
   $: rest = [undefined, "st", "nd", "rd"][count] ?? "th"
 
@@ -30,13 +35,22 @@
       .split(" ")
   }, 2000)
 
-  function resize() {
-    console.warn("reaize!", ViewBox, ZoomBox, SafeAreaBox)
+  async function reqPlan() {
+    const req = await fetch("https://giji-api.duckdns.org/api/plan/progress")
+    return (data = await req.json())
   }
 
-  function scroll() {
-    console.warn("scroll!", ViewBox, ZoomBox, SafeAreaBox)
+  function keyCombo(e) {
+    console.log(e)
   }
+
+  function keyDown(e) {
+    console.log(e)
+  }
+
+  function resize() {}
+
+  function scroll() {}
 
   function handleClick() {
     count++
@@ -54,15 +68,18 @@
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    {@html news.join('<br />')}
-  </p>
-  <p>
-    Visit the
-    <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-    to learn how to build Svelte apps.
-  </p>
+  <FullScreen bind:toggle={fs}>
+    <h1>Hello {name}!</h1>
+    <p>
+      {@html news.join('<br />')}
+    </p>
+    <p>
+      Visit the
+      <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
+      to learn how to build Svelte apps.
+    </p>
+    <button on:click={fs}>full screen</button>
+  </FullScreen>
   <button on:click={handleClick}>Clicked
     <span style={`color: ${color}`}>{count}{rest}</span></button>
 
@@ -79,6 +96,8 @@
 </main>
 <SafeArea {resize} {scroll} />
 <HeadViewport max={2} />
+<KeyBoard on:key={keyDown} on:combo={keyCombo} />
+<Poll timer="1m" api={reqPlan} />
 
 <style lang="scss">
   main {

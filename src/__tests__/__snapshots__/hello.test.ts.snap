@@ -12,6 +12,7 @@ Object {
       "ctx": Array [
         "world",
         0,
+        [Function],
         0,
         32,
         Array [
@@ -23,8 +24,8 @@ Object {
         [Function],
         [Function],
         [Function],
-        [Function],
         undefined,
+        [Function],
         [Function],
         [Function],
       ],
@@ -62,27 +63,33 @@ Object {
       <main
         class="svelte-r84n57"
       >
-        <h1
-          class="svelte-r84n57"
-        >
-          Hello 
-          world
-          !
-        </h1>
-         
-        <p />
-         
-        <p>
-          Visit the
-    
-          <a
-            href="https://svelte.dev/tutorial"
+        <div>
+          <h1
+            class="svelte-r84n57"
           >
-            Svelte tutorial
-          </a>
-          
-    to learn how to build Svelte apps.
-        </p>
+            Hello 
+            world
+            !
+          </h1>
+           
+          <p />
+           
+          <p>
+            Visit the
+      
+            <a
+              href="https://svelte.dev/tutorial"
+            >
+              Svelte tutorial
+            </a>
+            
+      to learn how to build Svelte apps.
+          </p>
+           
+          <button>
+            full screen
+          </button>
+        </div>
          
         <button>
           Clicked
@@ -118,6 +125,8 @@ Object {
       <div
         class="svelte-pq94x5"
       />
+       
+       
        
     </div>
   </body>,
