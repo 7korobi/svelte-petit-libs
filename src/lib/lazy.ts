@@ -29,6 +29,10 @@ export class Lazy {
     Loader.join(group, this)
   }
 
+  abort() {
+    this.el.dispatchEvent(new CustomEvent('--abort'))
+  }
+
   bye(group: string) {
     Loader.bye(group, this)
   }
@@ -64,13 +68,13 @@ export class Loader {
   idx = 0
   idxStore = writable(0)
   byeOnline = isOnline.subscribe((online) => {
-    online && doNextSequence(this)
+    if (online) doNextSequence(this)
   })
 
   list: Lazy[] = []
   root: HTMLDivElement
   group: string
-  doing: Promise<any>
+  doing: Lazy
 
   shows: IntersectionObserver
   deploys: IntersectionObserver
@@ -91,9 +95,8 @@ export class Loader {
         entries.forEach(({ target, isIntersecting }) => {
           const e: Lazy = (target as any).item
           e.isExpress = isIntersecting
-          doNextSequence(this)
         })
-        ;(entries[0] as any).target.item.manager.nextDeploy()
+        doNextSequence(this)
       },
       {
         root,
@@ -120,29 +123,21 @@ export class Loader {
       }
     )
   }
-
-  start() {
-    if (this.doing) {
-      this.doing.then(doNextSequence.bind(null, this))
-    } else {
-      doNextSequence(this)
-    }
-  }
 }
 
 function doSequence(dl: Loader, e?: Lazy) {
-  if (!e) {
-    delete dl.doing
-    return
-  }
+  if (!e) return
   if (!window.navigator.onLine) return
 
-  dl.doing = readyDownload(e.el, e.url, e.timeout)
+  dl.doing = e
+  readyDownload(e.el, e.url, e.timeout)
     .then(() => {
+      delete dl.doing
       e.isLoaded = true
       doNextSequence(dl)
     })
     .catch(() => {
+      delete dl.doing
       if (window.navigator.onLine) {
         e.errorAt = new Date().getTime()
         doNextSequence(dl)
@@ -151,7 +146,11 @@ function doSequence(dl: Loader, e?: Lazy) {
 }
 
 function doNextSequence(dl: Loader) {
-  doSequence(dl, nextSequence(dl))
+  const e = nextSequence(dl)
+  if (e && dl.doing && e !== dl.doing) {
+    dl.doing.abort()
+  }
+  doSequence(dl, e)  
 }
 
 function nextSequence(dl: Loader) {

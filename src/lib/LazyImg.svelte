@@ -12,7 +12,6 @@
 
   let lazy = new Lazy(group, el, src, timeout)
 
-  onMount(() => {})
   onDestroy(() => {
     lazy.bye(group)
   })
