@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ViewBox, SafeAreaBox } from "./area"
-  import { isIOS, isRadius, isLegacy } from "./device"
+  import { isIOS, isRadius } from "./device"
   import ViewArea from "./ViewArea.svelte"
 
   const MINIMUM_PIXEL_SIZE = 0.2
@@ -11,8 +11,8 @@
   export let ratio = 1.0
   export let isDefaultSafeArea = true
 
-  export let resize: { (): void } | undefined
-  export let scroll: { (): void } | undefined
+  export let resize: { (): void }
+  export let scroll: { (): void }
 
   let measure: HTMLDivElement
   let [st, sr, sb, sl] = SafeAreaBox.offset

@@ -5,8 +5,8 @@
 
   const { style } = document.body
 
-  export let resize: { (): void } | undefined
-  export let scroll: { (): void } | undefined
+  export let resize: { (): void }
+  export let scroll: { (): void }
 
   let [vw, vh] = ViewBox.size
   let [zw, zh] = ZoomBox.size
