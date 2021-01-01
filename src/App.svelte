@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Calendar } from "fancy-date/lib/sample"
-  import { SafeAreaBox, ViewBox, ZoomBox } from "./lib/area"
   import HeadViewport from "./lib/HeadViewport.svelte"
   import SafeArea from "./lib/SafeArea.svelte"
   import KeyBoard from "./lib/KeyBoard.svelte"
   import FullScreen from "./lib/FullScreen.svelte"
   import Poll from "./lib/Poll.svelte"
+  import { isOnline } from "./lib/browser"
 
   export let name: string
 
@@ -17,6 +17,7 @@
   let rest = "th"
   let color = "black"
   let data = []
+  let testOnline = false
 
   $: rest = [undefined, "st", "nd", "rd"][count] ?? "th"
 
@@ -67,9 +68,11 @@
   }
 </script>
 
+{testOnline}
+
 <main>
   <FullScreen bind:toggle={fs}>
-    <h1>Hello {name}!</h1>
+    <h1>Hello {name}! {$isOnline ? 'online' : 'offline'}</h1>
     <p>
       {@html news.join('<br />')}
     </p>
@@ -97,7 +100,7 @@
 <SafeArea {resize} {scroll} />
 <HeadViewport max={2} />
 <KeyBoard on:key={keyDown} on:combo={keyCombo} />
-<Poll timer="1m" api={reqPlan} />
+<Poll timer="6h" api={reqPlan} />
 
 <style lang="scss">
   main {

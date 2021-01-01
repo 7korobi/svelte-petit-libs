@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, onDestroy } from "svelte"
+  import { onDestroy, createEventDispatcher } from "svelte"
   import { Lazy } from "./lazy"
 
   export let el: HTMLImageElement
@@ -10,7 +10,11 @@
   export const height = 0
   export const timeout = 20000
 
-  let lazy = new Lazy(group, el, src, timeout)
+  const dispatch = createEventDispatcher()
+  const lazy = new Lazy(group, el, src, timeout)
+  lazy.onscroll = (rect) => {
+    dispatch("scroll", { rect, target: el })
+  }
 
   onDestroy(() => {
     lazy.bye(group)

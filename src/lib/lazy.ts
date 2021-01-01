@@ -13,8 +13,9 @@ export class Lazy {
   loader: Loader
 
   errorAt = 0
-  isLoaded: boolean
-  isExpress: boolean
+  isShow: boolean = false
+  isLoaded: boolean = false
+  isExpress: boolean = false
 
   constructor(
     group: string,
@@ -29,8 +30,12 @@ export class Lazy {
     Loader.join(group, this)
   }
 
+  onscroll(rect: DOMRect) {
+    throw new Error("Method not implemented.")
+  }
+
   abort() {
-    this.el.dispatchEvent(new CustomEvent('--abort'))
+    this.el.dispatchEvent(new CustomEvent("--abort"))
   }
 
   bye(group: string) {
@@ -53,16 +58,25 @@ export class Loader {
     e.idx = dl.list.length
     dl.list.push(e)
     dl.deploys.observe(e.el)
+    dl.indexs.observe(e.el)
     dl.shows.observe(e.el)
   }
 
   static bye(group: string, e: Lazy) {
     const dl = this.list[group]
     const idx = dl.list.indexOf(e)
+
     if (idx < 0) return
     dl.list.splice(idx, 1)
     dl.deploys.unobserve(e.el)
+    dl.indexs.unobserve(e.el)
     dl.shows.unobserve(e.el)
+
+    if (dl.list.length) return
+    dl.deploys.disconnect()
+    dl.indexs.disconnect()
+    dl.shows.disconnect()
+    delete this.list[group]
   }
 
   idx = 0
@@ -77,18 +91,26 @@ export class Loader {
   doing: Lazy
 
   shows: IntersectionObserver
+  indexs: IntersectionObserver
   deploys: IntersectionObserver
 
   constructor(
     group: string,
     root?: HTMLDivElement,
     option = {
-      fetchMargin: "0% 0% 0% 0%",
+      deployMargin: "100%",
       indexMargin: "-50%",
+      showMargin: "0%",
     }
   ) {
     this.group = group
     this.root = root
+    ;(root ?? window).addEventListener("scroll", () => {
+      this.list.forEach((e, idx) => {
+        if (!e.isShow) return
+        e.onscroll(e.el.getBoundingClientRect())
+      })
+    })
 
     this.deploys = new IntersectionObserver(
       (entries) => {
@@ -100,12 +122,12 @@ export class Loader {
       },
       {
         root,
-        rootMargin: option.fetchMargin,
+        rootMargin: option.deployMargin,
         threshold: [0],
       }
     )
 
-    this.shows = new IntersectionObserver(
+    this.indexs = new IntersectionObserver(
       (entries) => {
         entries.forEach(({ target, isIntersecting }) => {
           const e: Lazy = (target as any).item
@@ -119,6 +141,20 @@ export class Loader {
       {
         root,
         rootMargin: option.indexMargin,
+        threshold: [0],
+      }
+    )
+
+    this.shows = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(({ target, isIntersecting }) => {
+          const e: Lazy = (target as any).item
+          e.isShow = isIntersecting
+        })
+      },
+      {
+        root,
+        rootMargin: option.showMargin,
         threshold: [0],
       }
     )
@@ -150,7 +186,7 @@ function doNextSequence(dl: Loader) {
   if (e && dl.doing && e !== dl.doing) {
     dl.doing.abort()
   }
-  doSequence(dl, e)  
+  doSequence(dl, e)
 }
 
 function nextSequence(dl: Loader) {
