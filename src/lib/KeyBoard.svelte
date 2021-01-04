@@ -10,11 +10,11 @@
   $: if (combo.length > 0) dispatch("combo", combo.join("-"))
 
   function keyup({ key, code, isComposing }: KeyboardEvent) {
-    console.log({ key, code, isComposing })
+    // console.log({ key, code, isComposing })
     combo = []
   }
   function keydown({ key, code, repeat, isComposing }: KeyboardEvent) {
-    console.log({ key, code, repeat, isComposing })
+    // console.log({ key, code, repeat, isComposing })
     if (!paused) {
       if (!repeat) combo = [...combo, key]
       dispatch(key)

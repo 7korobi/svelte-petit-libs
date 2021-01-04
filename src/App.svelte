@@ -5,6 +5,7 @@
   import KeyBoard from "./lib/KeyBoard.svelte"
   import FullScreen from "./lib/FullScreen.svelte"
   import Poll from "./lib/Poll.svelte"
+  import RoosterArea from "./lib/RoosterArea.svelte"
   import { isOnline } from "./lib/browser"
 
   export let name: string
@@ -42,11 +43,11 @@
   }
 
   function keyCombo(e) {
-    console.log(e)
+    //console.log(e)
   }
 
   function keyDown(e) {
-    console.log(e)
+    //console.log(e)
   }
 
   function resize() {}
@@ -81,6 +82,7 @@
       <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
       to learn how to build Svelte apps.
     </p>
+    <RoosterArea />
     <button on:click={fs}>full screen</button>
   </FullScreen>
   <button on:click={handleClick}>Clicked

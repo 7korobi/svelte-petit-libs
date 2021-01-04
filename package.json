@@ -41,6 +41,7 @@
   "dependencies": {
     "dexie": "^3.0.3",
     "fancy-date": "^0.4.0",
+    "roosterjs": "^7.16.0",
     "sirv-cli": "^1.0.10",
     "tslib": "^2.0.3",
     "ua-parser-js": "^0.7.23"
