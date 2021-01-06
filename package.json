@@ -1,6 +1,7 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
+  "name": "svelte-petit-libs",
+  "version": "0.0.2",
+  "license": "MIT",
   "scripts": {
     "deploy": "run-s format build",
     "start": "sirv public",
@@ -12,6 +13,16 @@
     "dev": "rollup -c -w"
   },
   "devDependencies": {
+    "fake-indexeddb": "^3.1.2",
+    "jest": "^26.6.3",
+    "node-fetch": "^2.6.1",
+    "npm-run-all": "^4.1.5",
+    "sirv-cli": "^1.0.10",
+    "svelte-check": "^1.1.23",
+    "svelte-jester": "^1.3.0",
+    "ts-jest": "^26.4.4"
+  },
+  "dependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.1",
     "@rollup/plugin-typescript": "^8.1.0",
@@ -20,10 +31,6 @@
     "@tsconfig/svelte": "^1.0.10",
     "@types/jest": "^26.0.19",
     "@types/node": "^14.14.17",
-    "fake-indexeddb": "^3.1.2",
-    "jest": "^26.6.3",
-    "node-fetch": "^2.6.1",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^1.4.2",
     "rollup": "^2.35.1",
@@ -32,17 +39,11 @@
     "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.30.0",
     "svelte": "^3.31.0",
-    "svelte-check": "^1.1.23",
-    "svelte-jester": "^1.3.0",
     "svelte-preprocess": "^4.6.1",
-    "ts-jest": "^26.4.4",
-    "typescript": "^4.1.3"
-  },
-  "dependencies": {
+    "typescript": "^4.1.3",
     "dexie": "^3.0.3",
     "fancy-date": "^0.4.0",
     "roosterjs": "^7.16.0",
-    "sirv-cli": "^1.0.10",
     "tslib": "^2.0.3",
     "ua-parser-js": "^0.7.23"
   },
