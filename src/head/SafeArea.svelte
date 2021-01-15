@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { ViewBox, SafeAreaBox } from "./area"
-  import { isIOS, isRadius } from "./device"
+  import { ViewBox, SafeAreaBox } from "../lib/area"
+  import { isIOS, isRadius } from "../lib/device"
   import ViewArea from "./ViewArea.svelte"
 
   const MINIMUM_PIXEL_SIZE = 0.2

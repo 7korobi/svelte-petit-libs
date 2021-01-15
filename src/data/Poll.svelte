@@ -1,10 +1,10 @@
 <script lang="ts">
   import { onDestroy } from "svelte"
 
-  import { to_tempo, Tempo } from "./time"
-  import { __BROWSER__ } from "./device"
-  import { dexie } from "./poll-cache"
-  import { isActive } from "./browser"
+  import { to_tempo, Tempo } from "../lib/time"
+  import { __BROWSER__ } from "../lib/device"
+  import { dexie } from "../lib/poll-cache"
+  import { isActive } from "../lib/browser"
 
   type DATA = {
     idx: string

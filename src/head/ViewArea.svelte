@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { isLegacy } from "./device"
-  import { ViewBox, ZoomBox, setResize, setScroll } from "./area"
+  import { isLegacy } from "../lib/device"
+  import { ViewBox, ZoomBox, setResize, setScroll } from "../lib/area"
   import { onMount, onDestroy } from "svelte"
 
   const { style } = document.body

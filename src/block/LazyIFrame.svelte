@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy, createEventDispatcher } from "svelte"
-  import { Lazy } from "./lazy"
+  import { Lazy } from "../lib/lazy"
 
   export let el: HTMLIFrameElement
   export const group = "images"

@@ -2,7 +2,7 @@
   import * as R from "roosterjs"
   import { getPendableFormatState } from "roosterjs-editor-dom"
   import { getElementBasedFormatState } from "roosterjs-editor-api/lib/format/getFormatState"
-  import { options } from "./rooster"
+  import { options } from "../lib/rooster"
 
   export let editor: R.Editor
 

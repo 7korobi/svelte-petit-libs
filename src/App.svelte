@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Calendar } from "fancy-date/lib/sample"
-  import HeadViewport from "./lib/HeadViewport.svelte"
-  import SafeArea from "./lib/SafeArea.svelte"
-  import KeyBoard from "./lib/KeyBoard.svelte"
-  import FullScreen from "./lib/FullScreen.svelte"
-  import Poll from "./lib/Poll.svelte"
-  import RoosterArea from "./lib/RoosterArea.svelte"
+  import Giji from "./layout/Giji.svelte"
+  import Chat from "./chat/Chat.svelte"
+  import KeyBoard from "./head/KeyBoard.svelte"
+  import FullScreen from "./head/FullScreen.svelte"
+  import Poll from "./data/Poll.svelte"
+  import RoosterArea from "./form/RoosterArea.svelte"
   import { isOnline } from "./lib/browser"
 
   export let name: string
@@ -18,7 +18,6 @@
   let rest = "th"
   let color = "black"
   let data = []
-  let testOnline = false
 
   $: rest = [undefined, "st", "nd", "rd"][count] ?? "th"
 
@@ -50,10 +49,6 @@
     //console.log(e)
   }
 
-  function resize() {}
-
-  function scroll() {}
-
   function handleClick() {
     count++
   }
@@ -69,38 +64,41 @@
   }
 </script>
 
-{testOnline}
-
-<main>
+<Giji max={2.0}>
   <FullScreen bind:toggle={fs}>
-    <h1>Hello {name}! {$isOnline ? 'online' : 'offline'}</h1>
-    <p>
-      {@html news.join('<br />')}
-    </p>
-    <p>
-      Visit the
-      <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
-      to learn how to build Svelte apps.
-    </p>
-    <RoosterArea />
-    <button on:click={fs}>full screen</button>
+    <Chat show="report" handle="VSSAY">
+      <h1 class="c">Hello {name}! {$isOnline ? 'online' : 'offline'}</h1>
+      <p class="c">
+        {@html news.join('<br />')}
+      </p>
+      <p>
+        Visit the
+        <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
+        to learn how to build Svelte apps.
+      </p>
+    </Chat>
+    <Chat show="talk" handle="PSAY" face_id="c03">
+      <RoosterArea />
+      <button on:click={fs}>full screen</button>
+    </Chat>
   </FullScreen>
-  <button on:click={handleClick}>Clicked
-    <span style={`color: ${color}`}>{count}{rest}</span></button>
 
-  <!-- https://github.com/eugenkiss/7guis/wiki#temperature-converter -->
-  <input value={c} on:input={(e) => byC(e.currentTarget.value)} type="number" />
-  °c =
-  <input value={f} on:input={(e) => byF(e.currentTarget.value)} type="number" />
-  °f
-  <style>
-    input {
-      width: 5em;
-    }
-  </style>
-</main>
-<SafeArea {resize} {scroll} />
-<HeadViewport max={2} />
+  <Chat show="post" handle="TSAY">
+    <button on:click={handleClick}>Clicked
+      <span style={`color: ${color}`}>{count}{rest}</span></button>
+  
+    <!-- https://github.com/eugenkiss/7guis/wiki#temperature-converter -->
+    <input value={c} on:input={(e) => byC(e.currentTarget.value)} type="number" />
+    °c =
+    <input value={f} on:input={(e) => byF(e.currentTarget.value)} type="number" />
+    °f
+    <style>
+      input {
+        width: 5em;
+      }
+    </style>
+  </Chat>
+</Giji>
 <KeyBoard on:key={keyDown} on:combo={keyCombo} />
 <Poll timer="6h" api={reqPlan} />
 
