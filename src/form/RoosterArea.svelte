@@ -111,9 +111,11 @@
 
 <style lang="scss">
   .editor {
-    width: 500px;
+    width: 100%;
     height: 300px;
     overflow: auto;
-    border: solid 1px black;
+    &:focus {
+      outline: dotted white 1px;
+    }
   }
 </style>
