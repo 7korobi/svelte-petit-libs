@@ -228,16 +228,11 @@ export class Bits<T extends string, U extends string> {
   }
 
   static count(x: number) {
-    let n: number
-    x = x & 0xffffffff
-    n = (x >>> 1) & 0x77777777
-    x = x - n
-    n = (n >>> 1) & 0x77777777
-    x = x - n
-    n = (n >>> 1) & 0x77777777
-    x = x - n
+    x = x - ((x >>> 1) & 0x55555555)
+    x = (x & 0x33333333) + ((x >>> 2) & 0x33333333)
     x = (x + (x >>> 4)) & 0x0f0f0f0f
-    x = x * 0x01010101
-    return x >>> 24
+    x = x + (x >>> 8)
+    x = x + (x >>> 16)
+    return x & 0x3f // + x >> 32n
   }
 }
