@@ -99,8 +99,8 @@ export class Bits<T extends string, U extends string> {
 
     for (const label in options) {
       format.call(this, label)
-      options[label].forEach((key: T, idx) => {
-        calc.call(this, label, idx)
+      options[label].forEach((key: T) => {
+        calc.call(this, label, this.idx[key])
       })
       ;(this.labels as any[]).push(label)
     }
@@ -162,6 +162,14 @@ export class Bits<T extends string, U extends string> {
       n = n.value
     }
     return JSON.stringify(this.by(n))
+  }
+
+  static toggle(x: number, y: number) {
+    if ((x & y) === y) {
+      return x & y
+    } else {
+      return x | y
+    }
   }
 
   static isSingle(x: number) {

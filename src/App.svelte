@@ -1,30 +1,43 @@
 <script lang="ts">
   import { Calendar } from "fancy-date/lib/sample"
   import { isOnline } from "./lib/browser"
+  import { Bits } from "./lib/bits"
+
+  import Poll from "./data/Poll.svelte"
 
   import Giji from "./layout/Giji.svelte"
-  import Chat from "./chat/Chat.svelte"
 
-  import Scroll from "./block/Scroll.svelte"
+  import Chat from "./chat/Chat.svelte"
+  import Banner from "./chat/Banner.svelte"
+
   import KeyBoard from "./head/KeyBoard.svelte"
   import FullScreen from "./head/FullScreen.svelte"
-  import Poll from "./data/Poll.svelte"
+
   import RoosterArea from "./form/RoosterArea.svelte"
-  import Diagram from "./svg/Diagram.svelte"
-  import Banner from "./chat/Banner.svelte"
+
+  import Btn from "./inline/Btn.svelte"
+
+  import Scroll from "./block/Scroll.svelte"
+  import Diagram from "./block/Diagram.svelte"
 
   export let name: string
 
   let fs
   let c = 0
   let f = 32
-  let ymd = ""
   let texts = []
   let rubys = []
   let count = 0
   let rest = "th"
   let color = "black"
   let data = []
+
+  const GameBits = new Bits(["A", "B", "C", "D"], {
+    AB: ["B", "A"],
+    CD: ["C", "D"],
+    BC: ["AB", "C"],
+  })
+  let games = 0
 
   let icons = [
     { v: "c01", roll: 0, x: -200, y: -100, label: "花売り メアリー" },
@@ -55,12 +68,14 @@
     const data = Calendar.平気法
       .format(
         new Date().getTime(),
-        "Gy年Mod日Mr|Ho mo ao Ao Eo Fo No Zo|Hr mr ar Ar Er Fr Nr Zr"
+        "Gy年 d日|Mo Ho mo ao Ao Eo Fo No Zo|Mr Hr mr ar Ar Er Fr Nr Zr"
       )
       .split("|")
-    ymd = data[0]
+    const ymd = data[0].split(" ")
     texts = data[1].split(" ")
     rubys = data[2].split(" ")
+    rubys = ["", rubys[0], "", ...rubys.slice(1)]
+    texts = [ymd[0], texts[0], ymd[1], ...texts.slice(1)]
   }, 2000)
 
   async function reqPlan() {
@@ -104,10 +119,89 @@
       <Chat show="report" handle="VSSAY">
         <h1 class="c">Hello {name}! {$isOnline ? 'online' : 'offline'}</h1>
         <p>
-          {ymd}
+          on :
+          {#each GameBits.labels as game (game)}
+            <Btn type="on" bind:value={games} as={GameBits.posi[game]}>
+              +{game}
+            </Btn>
+          {/each}
+          {#each GameBits.labels as game (game)}
+            <Btn type="on" bind:value={games} as={GameBits.nega[game]}>
+              -{game}
+            </Btn>
+          {/each}
+        </p>
+        <p>
+          off :
+          {#each GameBits.labels as game (game)}
+            <Btn type="off" bind:value={games} as={GameBits.posi[game]}>
+              +{game}
+            </Btn>
+          {/each}
+          {#each GameBits.labels as game (game)}
+            <Btn type="off" bind:value={games} as={GameBits.nega[game]}>
+              -{game}
+            </Btn>
+          {/each}
+        </p>
+        <p>
+          xor :
+          {#each GameBits.labels as game (game)}
+            <Btn type="xor" bind:value={games} as={GameBits.posi[game]}>
+              +{game}
+            </Btn>
+          {/each}
+          {#each GameBits.labels as game (game)}
+            <Btn type="xor" bind:value={games} as={GameBits.nega[game]}>
+              -{game}
+            </Btn>
+          {/each}
+        </p>
+        <p>
+          toggle :
+          {#each GameBits.labels as game (game)}
+            <Btn type="toggle" bind:value={games} as={GameBits.posi[game]}>
+              +{game}
+            </Btn>
+          {/each}
+          {#each GameBits.labels as game (game)}
+            <Btn type="toggle" bind:value={games} as={GameBits.nega[game]}>
+              -{game}
+            </Btn>
+          {/each}
+        </p>
+        <p>
+          set :
+          {#each GameBits.labels as game (game)}
+            <Btn type="set" bind:value={games} as={GameBits.posi[game]}>
+              +{game}
+            </Btn>
+          {/each}
+          {#each GameBits.labels as game (game)}
+            <Btn type="set" bind:value={games} as={GameBits.nega[game]}>
+              -{game}
+            </Btn>
+          {/each}
+        </p>
+        <p>
+          as :
+          {#each GameBits.labels as game (game)}
+            <Btn type="as" bind:value={games} as={GameBits.posi[game]}>
+              +{game}
+            </Btn>
+          {/each}
+          {#each GameBits.labels as game (game)}
+            <Btn type="as" bind:value={games} as={GameBits.nega[game]}>
+              -{game}
+            </Btn>
+          {/each}
+        </p>
+        <p>
           {#each texts as text, idx (text)}
-            <ruby>{text}
-              <rt>{rubys[idx]}</rt></ruby>
+            {#if rubys[idx]}
+              <ruby>{text}
+                <rt>{rubys[idx]}</rt></ruby>
+            {:else}{text}{/if}
           {/each}
         </p>
         <p>
