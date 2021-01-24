@@ -166,7 +166,7 @@ export class Bits<T extends string, U extends string> {
 
   static toggle(x: number, y: number) {
     if ((x & y) === y) {
-      return x & y
+      return x & ~y
     } else {
       return x | y
     }

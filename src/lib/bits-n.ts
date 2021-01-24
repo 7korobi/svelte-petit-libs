@@ -162,7 +162,7 @@ export class BitsN<T extends string, U extends string> {
 
   static toggle(x: bigint, y: bigint) {
     if ((x & y) === y) {
-      return x & y
+      return x & ~y
     } else {
       return x | y
     }
