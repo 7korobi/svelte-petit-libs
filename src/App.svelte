@@ -127,7 +127,7 @@
           {/each}
           {#each GameBits.labels as game (game)}
             <Btn type="on" bind:value={games} as={GameBits.nega[game]}>
-              -{game}
+              ~{game}
             </Btn>
           {/each}
         </p>
@@ -140,7 +140,7 @@
           {/each}
           {#each GameBits.labels as game (game)}
             <Btn type="off" bind:value={games} as={GameBits.nega[game]}>
-              -{game}
+              ~{game}
             </Btn>
           {/each}
         </p>
@@ -153,7 +153,7 @@
           {/each}
           {#each GameBits.labels as game (game)}
             <Btn type="xor" bind:value={games} as={GameBits.nega[game]}>
-              -{game}
+              ~{game}
             </Btn>
           {/each}
         </p>
@@ -166,7 +166,7 @@
           {/each}
           {#each GameBits.labels as game (game)}
             <Btn type="toggle" bind:value={games} as={GameBits.nega[game]}>
-              -{game}
+              ~{game}
             </Btn>
           {/each}
         </p>
@@ -179,7 +179,7 @@
           {/each}
           {#each GameBits.labels as game (game)}
             <Btn type="set" bind:value={games} as={GameBits.nega[game]}>
-              -{game}
+              ~{game}
             </Btn>
           {/each}
         </p>
@@ -192,7 +192,7 @@
           {/each}
           {#each GameBits.labels as game (game)}
             <Btn type="as" bind:value={games} as={GameBits.nega[game]}>
-              -{game}
+              ~{game}
             </Btn>
           {/each}
         </p>
