@@ -1,5 +1,5 @@
-type Label<T, U> = T | U | 'all'
-type Labels<T, U> = readonly (T | U | 'all')[]
+type Label<T, U> = T | U | "all"
+type Labels<T, U> = readonly (T | U | "all")[]
 type BitsDic<T extends string, U extends string, X> = {
   [key in Label<T, U>]: X
 }
@@ -87,9 +87,9 @@ export class BitsN<T extends string, U extends string> {
     labels.forEach(format.bind(this))
     labels.forEach(calc.bind(this))
 
-    format.call(this, 'all')
+    format.call(this, "all")
     labels.forEach((key: T, idx) => {
-      calc.call(this, 'all', idx)
+      calc.call(this, "all", idx)
     })
 
     for (const label in options) {
@@ -99,7 +99,7 @@ export class BitsN<T extends string, U extends string> {
       })
       ;(this.labels as any[]).push(label)
     }
-    ;(this.labels as any[]).push('all')
+    ;(this.labels as any[]).push("all")
 
     function format(this: BitsN<T, U>, label: Label<T, U>) {
       this.posi[label] = this.idx[label] = 0n
@@ -118,7 +118,7 @@ export class BitsN<T extends string, U extends string> {
   by(src: Labels<T, U>): bigint
   by(src: bigint): Labels<T, U>
   by(src: Labels<T, U> | bigint): Labels<T, U> | bigint {
-    if ('bigint' === typeof src) {
+    if ("bigint" === typeof src) {
       const labels: Labels<T, U> = []
       this.labels.forEach((label: Label<T, U>) => {
         const x = this.posi[label]
@@ -135,7 +135,7 @@ export class BitsN<T extends string, U extends string> {
       })
       return n
     }
-    throw new Error('invalid request type.')
+    throw new Error("invalid request type.")
   }
 
   data(n: bigint) {

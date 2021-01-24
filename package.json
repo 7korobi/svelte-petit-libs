@@ -9,6 +9,9 @@
     "test": "jest",
     "check": "svelte-check",
     "validate": "run-p format test check",
+    "css": "run-s make:sass make:brotli",
+    "make:sass": "sass --style compressed src/scss:public/css",
+    "make:brotli": "find public -type f -not -name \"*.br\" | grep -v \"dist/font\" | xargs -L1  brotli -Z -f -k",
     "format": "prettier --write --no-semi --svelte-sort-order scripts-markup-styles ./src/",
     "dev": "rollup -c -w"
   },
