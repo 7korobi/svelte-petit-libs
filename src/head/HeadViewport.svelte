@@ -14,5 +14,5 @@
 </script>
 
 <svelte:head>
-  <meta name="viewport" content={viewport_content.join(',')} />
+  <meta name="viewport" content={viewport_content.join(",")} />
 </svelte:head>

@@ -35,38 +35,43 @@
               </p>
               <p
                 data-tooltip="不十分な画面幅にあわせ、折返し表示をしています"
-                class="limit1-ng tooltip-left">
+                class="limit1-ng tooltip-left"
+              >
                 折返中
               </p>
             </div>
           </Report>
           <div class="icons form">
-            <a
+            <button
               class="btn item-half tooltip-left"
-              data-tooltip="詳細情報を拡げる操作の ON / OFF">
+              data-tooltip="詳細情報を拡げる操作の ON / OFF"
+            >
               <i class="mdi mdi-arrow-expand-right" />
-            </a>
-            <a
+            </button>
+            <button
               class="btn item-half tooltip-left active"
-              data-tooltip="ページ一覧を一列にする / 折り返す">
+              data-tooltip="ページ一覧を一列にする / 折り返す"
+            >
               <i class="mdi mdi-gesture-swipe" />
-            </a>
+            </button>
           </div>
         </div>
       </div>
       <div class="sideframe">
         <div class="inframe">
           <div class="icons form">
-            <a
+            <button
               class="btn item-half tooltip-left"
-              data-tooltip="詳細情報を拡げる操作の ON / OFF">
+              data-tooltip="詳細情報を拡げる操作の ON / OFF"
+            >
               <i class="mdi mdi-arrow-expand-right" />
-            </a>
-            <a
+            </button>
+            <button
               class="btn item-half tooltip-left active"
-              data-tooltip="ページ一覧を一列にする / 折り返す">
+              data-tooltip="ページ一覧を一列にする / 折り返す"
+            >
               <i class="mdi mdi-gesture-swipe" />
-            </a>
+            </button>
           </div>
         </div>
       </div>

@@ -89,17 +89,22 @@
   <button on:click={() => R.toggleHeader(editor, 5)}><h5>◯</h5></button>
   <button on:click={() => R.toggleHeader(editor, 6)}><h6>◯</h6></button>
   &nbsp;
-  <button on:click={() => R.toggleBlockQuote(editor)}><blockquote>
-      ◯
-    </blockquote></button>
-  <button
-    on:click={() => R.toggleCodeBlock(editor)}><pre><code>◯</code></pre></button>
-  <button on:click={() => R.toggleBullet(editor)}><ul>
+  <button on:click={() => R.toggleBlockQuote(editor)}
+    ><blockquote>◯</blockquote></button
+  >
+  <button on:click={() => R.toggleCodeBlock(editor)}
+    ><pre><code>◯</code></pre></button
+  >
+  <button on:click={() => R.toggleBullet(editor)}
+    ><ul>
       <li>◯</li>
-    </ul></button>
-  <button on:click={() => R.toggleNumbering(editor)}><ol>
+    </ul></button
+  >
+  <button on:click={() => R.toggleNumbering(editor)}
+    ><ol>
       <li>◯</li>
-    </ol></button>
+    </ol></button
+  >
   &nbsp;
   {#if inputs.canUndo}<button on:click={() => editor.undo()}>⏪</button>{/if}
   {#if inputs.canRedo}<button on:click={() => editor.redo()}>⏩</button>{/if}

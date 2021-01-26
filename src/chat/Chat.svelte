@@ -17,8 +17,9 @@
   {#if head}
     <div class="name">
       {#if to}
-        <span class="pull-right">{to}</span>▷<span
-          class="pull-left">{head}</span>
+        <span class="pull-right">{to}</span>▷<span class="pull-left"
+          >{head}</span
+        >
       {:else}<span class="pull-right">{label}</span>{head}{/if}
       <hr />
     </div>

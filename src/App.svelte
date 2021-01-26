@@ -117,12 +117,12 @@
         <h3>.1.1</h3>
       </Banner>
       <Chat show="report" handle="VSSAY">
-        <h1 class="c">Hello {name}! {$isOnline ? 'online' : 'offline'}</h1>
+        <h1 class="c">Hello {name}! {$isOnline ? "online" : "offline"}</h1>
         <p>
           on :
           {#each GameBits.labels as game (game)}
             <Btn type="on" bind:value={games} as={GameBits.posi[game]}>
-              +{game}
+              {game}
             </Btn>
           {/each}
           {#each GameBits.labels as game (game)}
@@ -135,7 +135,7 @@
           off :
           {#each GameBits.labels as game (game)}
             <Btn type="off" bind:value={games} as={GameBits.posi[game]}>
-              +{game}
+              {game}
             </Btn>
           {/each}
           {#each GameBits.labels as game (game)}
@@ -148,7 +148,7 @@
           xor :
           {#each GameBits.labels as game (game)}
             <Btn type="xor" bind:value={games} as={GameBits.posi[game]}>
-              +{game}
+              {game}
             </Btn>
           {/each}
           {#each GameBits.labels as game (game)}
@@ -161,7 +161,7 @@
           toggle :
           {#each GameBits.labels as game (game)}
             <Btn type="toggle" bind:value={games} as={GameBits.posi[game]}>
-              +{game}
+              {game}
             </Btn>
           {/each}
           {#each GameBits.labels as game (game)}
@@ -174,7 +174,7 @@
           set :
           {#each GameBits.labels as game (game)}
             <Btn type="set" bind:value={games} as={GameBits.posi[game]}>
-              +{game}
+              {game}
             </Btn>
           {/each}
           {#each GameBits.labels as game (game)}
@@ -187,7 +187,7 @@
           as :
           {#each GameBits.labels as game (game)}
             <Btn type="as" bind:value={games} as={GameBits.posi[game]}>
-              +{game}
+              {game}
             </Btn>
           {/each}
           {#each GameBits.labels as game (game)}
@@ -199,8 +199,10 @@
         <p>
           {#each texts as text, idx (text)}
             {#if rubys[idx]}
-              <ruby>{text}
-                <rt>{rubys[idx]}</rt></ruby>
+              <ruby
+                >{text}
+                <rt>{rubys[idx]}</rt></ruby
+              >
             {:else}{text}{/if}
           {/each}
         </p>
@@ -226,26 +228,29 @@
     </Banner>
     <Scroll name=".2.1" on:change={intersection}>
       <Chat show="post" handle="TSAY">
-        <button on:click={handleClick}>Clicked
-          <span style={`color: ${color}`}>{count}{rest}</span></button>
+        <button on:click={handleClick}
+          >Clicked
+          <span style={`color: ${color}`}>{count}{rest}</span></button
+        >
 
         <!-- https://github.com/eugenkiss/7guis/wiki#temperature-converter -->
         <input
           value={c}
           on:input={(e) => byC(e.currentTarget.value)}
-          type="number" />
+          type="number"
+        />
         °c =
         <input
           value={f}
           on:input={(e) => byF(e.currentTarget.value)}
-          type="number" />
-        °f
-        <style>
+          type="number"
+        />
+        °f<style>
           input {
             width: 5em;
           }
-        </style>
-      </Chat>
+        </style></Chat
+      >
     </Scroll>
     <Scroll name=".2.2" on:change={intersection}>
       <Chat show="report" handle="SSAY">

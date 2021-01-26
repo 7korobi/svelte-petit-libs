@@ -156,6 +156,7 @@
   use:observe
   on:--range={onRange}
   on:--focus={onFocus}
-  on:--scroll={onScroll}>
+  on:--scroll={onScroll}
+>
   <slot />
 </div>

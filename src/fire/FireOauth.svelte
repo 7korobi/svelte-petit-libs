@@ -80,22 +80,21 @@
 </script>
 
 {#if user}
-  <span class="tap pull-right"><i
-      class="btn mdi mdi-logout"
-      on:click={signOut} /></span>
+  <span class="tap pull-right"
+    ><i class="btn mdi mdi-logout" on:click={signOut} /></span
+  >
   <span class="tap"><i class={icon}> &thinsp; {user.displayName}</i></span>
 {:else}
-  <span class="tap"><i
-      class="btn mdi mdi-facebook-box"
-      on:click={facebook} /></span>
+  <span class="tap"
+    ><i class="btn mdi mdi-facebook-box" on:click={facebook} /></span
+  >
   <span class="tap"><i class="btn mdi mdi-twitter" on:click={twitter} /></span>
-  <span class="tap"><i
-      class="btn mdi mdi-windows"
-      on:click={microsoft} /></span>
+  <span class="tap"><i class="btn mdi mdi-windows" on:click={microsoft} /></span
+  >
   <span class="tap"><i class="btn mdi mdi-google" on:click={google} /></span>
-  <span class="tap"><i
-      class="btn mdi mdi-github-face"
-      on:click={github} /></span>
+  <span class="tap"
+    ><i class="btn mdi mdi-github-face" on:click={github} /></span
+  >
 {/if}
 
 {#if error}<br /> {error.code} {error.message}{/if}
