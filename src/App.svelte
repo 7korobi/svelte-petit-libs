@@ -14,6 +14,7 @@
   import FullScreen from "./head/FullScreen.svelte"
 
   import RoosterArea from "./form/RoosterArea.svelte"
+  import EditorArea from "./form/EditorArea.svelte"
 
   import Btn from "./inline/Btn.svelte"
 
@@ -218,6 +219,9 @@
       <Chat show="talk" handle="PSAY" id="rooster" face_id="c03">
         <RoosterArea />
         <button on:click={fs}>full screen</button>
+      </Chat>
+      <Chat show="talk" handle="PSAY" id="editor" face_id="c03">
+        <EditorArea />
       </Chat>
     </FullScreen>
   </Scroll>
