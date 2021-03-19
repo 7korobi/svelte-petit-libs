@@ -1,15 +1,16 @@
 import type { RANDOM_TYPES, RANKS, SUITES } from "./_dic"
 
-export class Random {
-  texts!: [string] | [string, string]
-  types!: RANDOM_TYPES[]
+export type Randoms = Random[]
+export type Random = {
+  texts: [string] | [string, string]
+  types: RANDOM_TYPES[]
 
-  ratio!: number
-  order!: number
+  ratio: number
+  order: number
   year?: number
   number?: number
 
-  label!: string
+  label: string
   name?: string
   hebrew?: string
   roman?: string

@@ -4,7 +4,8 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*"],
   "compilerOptions": {
-    "types": ["jest"],
+    "resolveJsonModule": true,
+    "types": ["jest","node","node-fetch"],
     "target": "es2020",
   }
 }

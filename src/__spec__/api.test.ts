@@ -1,11 +1,10 @@
 import fetch from "node-fetch"
 import fastify from "fastify"
 
-import "./schema"
-
 const api = fastify({
   logger: true,
 })
+api.addSchema(require("./schema.json"))
 
 const schema = {
   // request needs to have a querystring with a `name` parameter
