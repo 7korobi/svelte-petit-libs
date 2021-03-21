@@ -1,6 +1,6 @@
-import App from "./App.svelte"
+import Root from "./routes/index.svelte"
 
-const app = new App({
+const app = new Root({
   target: document.body,
   props: {
     name: "world",

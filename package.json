@@ -14,7 +14,7 @@
     "format": "prettier --write --no-semi --svelte-sort-order scripts-markup-styles ./src/",
     "make:model": "ts-node src/make/model.ts",
     "make:schema": "ts-node src/cli/schema.ts",
-    "make:sass": "sass --style compressed src/scss:public/css",
+    "make:sass": "sass --style compressed src/scss:public/css 2>&1 | ruby -pe '$_.sub!(/.+ DEBUG: /,\"\")' | sort | uniq > src/__spec__/__snapshots__/scss-contrast.txt",
     "make:brotli": "find public -type f -not -name \"*.br\" | grep -v \"dist/font\" | xargs -L1  brotli -Z -f -k",
     "dev": "rollup -c -w"
   },
@@ -68,6 +68,7 @@
     "sass": "^1.32.8",
     "svelte": "^3.35.0",
     "svelte-preprocess": "^4.6.9",
+    "svelte-preprocess-markdown": "^2.7.3",
     "tslib": "^2.1.0",
     "typescript": "^4.2.3",
     "ua-parser-js": "^0.7.24"

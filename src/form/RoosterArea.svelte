@@ -119,8 +119,5 @@
     width: 100%;
     height: 300px;
     overflow: auto;
-    &:focus {
-      outline: dotted white 1px;
-    }
   }
 </style>

@@ -24,9 +24,9 @@
 </script>
 
 <svelte:head>
-  <link rel="stylesheet" href="{url.css}index.use.css" />
-  <link rel="stylesheet" href="{url.css}log-{day}.use.css" />
-  <link rel="stylesheet" href="{url.css}theme-{theme}.use.css" />
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/log-{day}.css" />
+  <link rel="stylesheet" href="/css/theme-{theme}.css" />
 </svelte:head>
 
 <div class="btns form">
