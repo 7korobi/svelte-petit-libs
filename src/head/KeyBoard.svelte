@@ -13,6 +13,7 @@
     // console.log({ key, code, isComposing })
     combo = []
   }
+
   function keydown({ key, code, repeat, isComposing }: KeyboardEvent) {
     // console.log({ key, code, repeat, isComposing })
     if (!paused) {

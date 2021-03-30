@@ -62,7 +62,7 @@
     },
     onReady: () => {
       const undo = new Undo({ editor })
-			// undo.initialize([])
+      // undo.initialize([])
     },
   })
 

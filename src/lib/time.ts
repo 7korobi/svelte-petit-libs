@@ -430,7 +430,7 @@ export function to_timer(msec: number, unit_mode: number = 1) {
 }
 
 export function to_relative_time_distance(msec: number) {
-  if (msec < -VALID || VALID < msec || msec - 0 == NaN) {
+  if (msec < -VALID || VALID < msec || isNaN(msec - 0)) {
     return DISTANCE_NAN
   }
   const _limit = DISTANCES.length

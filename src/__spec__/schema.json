@@ -162,10 +162,7 @@
                 "type": "string"
               },
               "cd_default": {
-                "enum": [
-                  "戦",
-                  "演"
-                ],
+                "enum": ["戦", "演"],
                 "type": "string"
               },
               "is_angular": {
@@ -176,9 +173,7 @@
                 "properties": {
                   "BASEDIR_CGI": {
                     "type": "string",
-                    "enum": [
-                      "."
-                    ]
+                    "enum": ["."]
                   },
                   "BASEDIR_CGIERR": {
                     "type": "string",
@@ -188,9 +183,7 @@
                   },
                   "BASEDIR_DAT": {
                     "type": "string",
-                    "enum": [
-                      "./data"
-                    ]
+                    "enum": ["./data"]
                   },
                   "BASEDIR_DOC": {
                     "type": "string",
@@ -200,75 +193,51 @@
                   },
                   "ENABLED_VMAKE": {
                     "type": "number",
-                    "enum": [
-                      0
-                    ]
+                    "enum": [0]
                   },
                   "MAX_LOG": {
                     "type": "number",
-                    "enum": [
-                      750
-                    ]
+                    "enum": [750]
                   },
                   "MAX_VILLAGES": {
                     "type": "number",
-                    "enum": [
-                      10
-                    ]
+                    "enum": [10]
                   },
                   "NAME_HOME": {
                     "type": "string",
-                    "enum": [
-                      "人狼議事 ロビー"
-                    ]
+                    "enum": ["人狼議事 ロビー"]
                   },
                   "RULE": {
                     "type": "string",
-                    "enum": [
-                      "LOBBY"
-                    ]
+                    "enum": ["LOBBY"]
                   },
                   "TIMEOUT_ENTRY": {
                     "type": "number",
-                    "enum": [
-                      3
-                    ]
+                    "enum": [3]
                   },
                   "TIMEOUT_SCRAP": {
                     "type": "number",
-                    "enum": [
-                      365
-                    ]
+                    "enum": [365]
                   },
                   "TOPPAGE_INFO": {
                     "type": "string",
-                    "enum": [
-                      "./_info.pl"
-                    ]
+                    "enum": ["./_info.pl"]
                   },
                   "TYPE": {
                     "type": "string",
-                    "enum": [
-                      "BRAID"
-                    ]
+                    "enum": ["BRAID"]
                   },
                   "URL_SW": {
                     "type": "string",
-                    "enum": [
-                      "http://dais.kokage.cc/guide_lobby/lobby"
-                    ]
+                    "enum": ["http://dais.kokage.cc/guide_lobby/lobby"]
                   },
                   "USERID_ADMIN": {
                     "type": "string",
-                    "enum": [
-                      "master"
-                    ]
+                    "enum": ["master"]
                   },
                   "USERID_NPC": {
                     "type": "string",
-                    "enum": [
-                      "master"
-                    ]
+                    "enum": ["master"]
                   }
                 }
               },
@@ -279,17 +248,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          "anonymity",
-                          "sign"
-                        ],
+                        "enum": ["anonymity", "sign"],
                         "type": "string"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "標準の投票方法(sign: 記名、anonymity:無記名)"
-                        ]
+                        "enum": ["標準の投票方法(sign: 記名、anonymity:無記名)"]
                       }
                     ],
                     "minItems": 2,
@@ -299,17 +263,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "1:対象を指定した発言（内緒話）を含める"
-                        ]
+                        "enum": ["1:対象を指定した発言（内緒話）を含める"]
                       }
                     ],
                     "minItems": 2,
@@ -319,10 +278,7 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
@@ -339,17 +295,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "少女や交霊者ののぞきみがひらがなのみ。"
-                        ]
+                        "enum": ["少女や交霊者ののぞきみがひらがなのみ。"]
                       }
                     ],
                     "minItems": 2,
@@ -359,17 +310,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "削除発言を表示するかどうか"
-                        ]
+                        "enum": ["削除発言を表示するかどうか"]
                       }
                     ],
                     "minItems": 2,
@@ -379,17 +325,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "エピローグを発言制限対象に 0:しない、1:する"
-                        ]
+                        "enum": ["エピローグを発言制限対象に 0:しない、1:する"]
                       }
                     ],
                     "minItems": 2,
@@ -399,17 +340,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "1:見物人が内緒話を使える。"
-                        ]
+                        "enum": ["1:見物人が内緒話を使える。"]
                       }
                     ],
                     "minItems": 2,
@@ -419,10 +355,7 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
@@ -439,17 +372,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "1:投票・能力先に「ランダム」を含める"
-                        ]
+                        "enum": ["1:投票・能力先に「ランダム」を含める"]
                       }
                     ],
                     "minItems": 2,
@@ -459,17 +387,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "0:ランダムイベント 1:順序通りのイベント"
-                        ]
+                        "enum": ["0:ランダムイベント 1:順序通りのイベント"]
                       }
                     ],
                     "minItems": 2,
@@ -479,17 +402,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "1:突然死あり"
-                        ]
+                        "enum": ["1:突然死あり"]
                       }
                     ],
                     "minItems": 2,
@@ -499,17 +417,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "1:自殺投票"
-                        ]
+                        "enum": ["1:自殺投票"]
                       }
                     ],
                     "minItems": 2,
@@ -519,17 +432,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "1:幽界トーク村を設定可能"
-                        ]
+                        "enum": ["1:幽界トーク村を設定可能"]
                       }
                     ],
                     "minItems": 2,
@@ -539,17 +447,12 @@
                     "type": "array",
                     "items": [
                       {
-                        "enum": [
-                          0,
-                          1
-                        ],
+                        "enum": [0, 1],
                         "type": "number"
                       },
                       {
                         "type": "string",
-                        "enum": [
-                          "1:勝利者表示をする。"
-                        ]
+                        "enum": ["1:勝利者表示をする。"]
                       }
                     ],
                     "minItems": 2,
@@ -576,33 +479,23 @@
                 "properties": {
                   "DIR_LIB": {
                     "type": "string",
-                    "enum": [
-                      "./lib"
-                    ]
+                    "enum": ["./lib"]
                   },
                   "DIR_HTML": {
                     "type": "string",
-                    "enum": [
-                      "./html"
-                    ]
+                    "enum": ["./html"]
                   },
                   "DIR_RS": {
                     "type": "string",
-                    "enum": [
-                      "./rs"
-                    ]
+                    "enum": ["./rs"]
                   },
                   "DIR_VIL": {
                     "type": "string",
-                    "enum": [
-                      "./data/vil"
-                    ]
+                    "enum": ["./data/vil"]
                   },
                   "DIR_USER": {
                     "type": "string",
-                    "enum": [
-                      "../data/user"
-                    ]
+                    "enum": ["../data/user"]
                   }
                 }
               }
@@ -756,13 +649,7 @@
             "type": "string"
           },
           "suite": {
-            "enum": [
-              "",
-              "♠",
-              "♡",
-              "♢",
-              "♣"
-            ],
+            "enum": ["", "♠", "♡", "♢", "♣"],
             "type": "string"
           },
           "rank": {
@@ -796,10 +683,7 @@
             "type": "string"
           },
           "mark_at": {
-            "type": [
-              "string",
-              "number"
-            ]
+            "type": ["string", "number"]
           }
         }
       }
@@ -810,19 +694,11 @@
   },
   "definitions": {
     "SHOWS": {
-      "enum": [
-        "post",
-        "report",
-        "talk"
-      ],
+      "enum": ["post", "report", "talk"],
       "type": "string"
     },
     "STYLES": {
-      "enum": [
-        "head",
-        "mono",
-        "plain"
-      ],
+      "enum": ["head", "mono", "plain"],
       "type": "string"
     },
     "Book": {
@@ -1007,10 +883,7 @@
                   "type": "string"
                 },
                 "cd_default": {
-                  "enum": [
-                    "戦",
-                    "演"
-                  ],
+                  "enum": ["戦", "演"],
                   "type": "string"
                 },
                 "is_angular": {
@@ -1021,9 +894,7 @@
                   "properties": {
                     "BASEDIR_CGI": {
                       "type": "string",
-                      "enum": [
-                        "."
-                      ]
+                      "enum": ["."]
                     },
                     "BASEDIR_CGIERR": {
                       "type": "string",
@@ -1033,9 +904,7 @@
                     },
                     "BASEDIR_DAT": {
                       "type": "string",
-                      "enum": [
-                        "./data"
-                      ]
+                      "enum": ["./data"]
                     },
                     "BASEDIR_DOC": {
                       "type": "string",
@@ -1045,75 +914,51 @@
                     },
                     "ENABLED_VMAKE": {
                       "type": "number",
-                      "enum": [
-                        0
-                      ]
+                      "enum": [0]
                     },
                     "MAX_LOG": {
                       "type": "number",
-                      "enum": [
-                        750
-                      ]
+                      "enum": [750]
                     },
                     "MAX_VILLAGES": {
                       "type": "number",
-                      "enum": [
-                        10
-                      ]
+                      "enum": [10]
                     },
                     "NAME_HOME": {
                       "type": "string",
-                      "enum": [
-                        "人狼議事 ロビー"
-                      ]
+                      "enum": ["人狼議事 ロビー"]
                     },
                     "RULE": {
                       "type": "string",
-                      "enum": [
-                        "LOBBY"
-                      ]
+                      "enum": ["LOBBY"]
                     },
                     "TIMEOUT_ENTRY": {
                       "type": "number",
-                      "enum": [
-                        3
-                      ]
+                      "enum": [3]
                     },
                     "TIMEOUT_SCRAP": {
                       "type": "number",
-                      "enum": [
-                        365
-                      ]
+                      "enum": [365]
                     },
                     "TOPPAGE_INFO": {
                       "type": "string",
-                      "enum": [
-                        "./_info.pl"
-                      ]
+                      "enum": ["./_info.pl"]
                     },
                     "TYPE": {
                       "type": "string",
-                      "enum": [
-                        "BRAID"
-                      ]
+                      "enum": ["BRAID"]
                     },
                     "URL_SW": {
                       "type": "string",
-                      "enum": [
-                        "http://dais.kokage.cc/guide_lobby/lobby"
-                      ]
+                      "enum": ["http://dais.kokage.cc/guide_lobby/lobby"]
                     },
                     "USERID_ADMIN": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     },
                     "USERID_NPC": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     }
                   }
                 },
@@ -1124,10 +969,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            "anonymity",
-                            "sign"
-                          ],
+                          "enum": ["anonymity", "sign"],
                           "type": "string"
                         },
                         {
@@ -1144,17 +986,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:対象を指定した発言（内緒話）を含める"
-                          ]
+                          "enum": ["1:対象を指定した発言（内緒話）を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -1164,10 +1001,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -1184,17 +1018,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "少女や交霊者ののぞきみがひらがなのみ。"
-                          ]
+                          "enum": ["少女や交霊者ののぞきみがひらがなのみ。"]
                         }
                       ],
                       "minItems": 2,
@@ -1204,17 +1033,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "削除発言を表示するかどうか"
-                          ]
+                          "enum": ["削除発言を表示するかどうか"]
                         }
                       ],
                       "minItems": 2,
@@ -1224,10 +1048,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -1244,17 +1065,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:見物人が内緒話を使える。"
-                          ]
+                          "enum": ["1:見物人が内緒話を使える。"]
                         }
                       ],
                       "minItems": 2,
@@ -1264,10 +1080,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -1284,17 +1097,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:投票・能力先に「ランダム」を含める"
-                          ]
+                          "enum": ["1:投票・能力先に「ランダム」を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -1304,17 +1112,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "0:ランダムイベント 1:順序通りのイベント"
-                          ]
+                          "enum": ["0:ランダムイベント 1:順序通りのイベント"]
                         }
                       ],
                       "minItems": 2,
@@ -1324,17 +1127,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:突然死あり"
-                          ]
+                          "enum": ["1:突然死あり"]
                         }
                       ],
                       "minItems": 2,
@@ -1344,17 +1142,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:自殺投票"
-                          ]
+                          "enum": ["1:自殺投票"]
                         }
                       ],
                       "minItems": 2,
@@ -1364,17 +1157,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:幽界トーク村を設定可能"
-                          ]
+                          "enum": ["1:幽界トーク村を設定可能"]
                         }
                       ],
                       "minItems": 2,
@@ -1384,17 +1172,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:勝利者表示をする。"
-                          ]
+                          "enum": ["1:勝利者表示をする。"]
                         }
                       ],
                       "minItems": 2,
@@ -1421,33 +1204,23 @@
                   "properties": {
                     "DIR_LIB": {
                       "type": "string",
-                      "enum": [
-                        "./lib"
-                      ]
+                      "enum": ["./lib"]
                     },
                     "DIR_HTML": {
                       "type": "string",
-                      "enum": [
-                        "./html"
-                      ]
+                      "enum": ["./html"]
                     },
                     "DIR_RS": {
                       "type": "string",
-                      "enum": [
-                        "./rs"
-                      ]
+                      "enum": ["./rs"]
                     },
                     "DIR_VIL": {
                       "type": "string",
-                      "enum": [
-                        "./data/vil"
-                      ]
+                      "enum": ["./data/vil"]
                     },
                     "DIR_USER": {
                       "type": "string",
-                      "enum": [
-                        "../data/user"
-                      ]
+                      "enum": ["../data/user"]
                     }
                   }
                 }
@@ -1738,10 +1511,7 @@
                   "type": "string"
                 },
                 "cd_default": {
-                  "enum": [
-                    "戦",
-                    "演"
-                  ],
+                  "enum": ["戦", "演"],
                   "type": "string"
                 },
                 "is_angular": {
@@ -1752,9 +1522,7 @@
                   "properties": {
                     "BASEDIR_CGI": {
                       "type": "string",
-                      "enum": [
-                        "."
-                      ]
+                      "enum": ["."]
                     },
                     "BASEDIR_CGIERR": {
                       "type": "string",
@@ -1764,9 +1532,7 @@
                     },
                     "BASEDIR_DAT": {
                       "type": "string",
-                      "enum": [
-                        "./data"
-                      ]
+                      "enum": ["./data"]
                     },
                     "BASEDIR_DOC": {
                       "type": "string",
@@ -1776,75 +1542,51 @@
                     },
                     "ENABLED_VMAKE": {
                       "type": "number",
-                      "enum": [
-                        0
-                      ]
+                      "enum": [0]
                     },
                     "MAX_LOG": {
                       "type": "number",
-                      "enum": [
-                        750
-                      ]
+                      "enum": [750]
                     },
                     "MAX_VILLAGES": {
                       "type": "number",
-                      "enum": [
-                        10
-                      ]
+                      "enum": [10]
                     },
                     "NAME_HOME": {
                       "type": "string",
-                      "enum": [
-                        "人狼議事 ロビー"
-                      ]
+                      "enum": ["人狼議事 ロビー"]
                     },
                     "RULE": {
                       "type": "string",
-                      "enum": [
-                        "LOBBY"
-                      ]
+                      "enum": ["LOBBY"]
                     },
                     "TIMEOUT_ENTRY": {
                       "type": "number",
-                      "enum": [
-                        3
-                      ]
+                      "enum": [3]
                     },
                     "TIMEOUT_SCRAP": {
                       "type": "number",
-                      "enum": [
-                        365
-                      ]
+                      "enum": [365]
                     },
                     "TOPPAGE_INFO": {
                       "type": "string",
-                      "enum": [
-                        "./_info.pl"
-                      ]
+                      "enum": ["./_info.pl"]
                     },
                     "TYPE": {
                       "type": "string",
-                      "enum": [
-                        "BRAID"
-                      ]
+                      "enum": ["BRAID"]
                     },
                     "URL_SW": {
                       "type": "string",
-                      "enum": [
-                        "http://dais.kokage.cc/guide_lobby/lobby"
-                      ]
+                      "enum": ["http://dais.kokage.cc/guide_lobby/lobby"]
                     },
                     "USERID_ADMIN": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     },
                     "USERID_NPC": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     }
                   }
                 },
@@ -1855,10 +1597,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            "anonymity",
-                            "sign"
-                          ],
+                          "enum": ["anonymity", "sign"],
                           "type": "string"
                         },
                         {
@@ -1875,17 +1614,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:対象を指定した発言（内緒話）を含める"
-                          ]
+                          "enum": ["1:対象を指定した発言（内緒話）を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -1895,10 +1629,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -1915,17 +1646,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "少女や交霊者ののぞきみがひらがなのみ。"
-                          ]
+                          "enum": ["少女や交霊者ののぞきみがひらがなのみ。"]
                         }
                       ],
                       "minItems": 2,
@@ -1935,17 +1661,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "削除発言を表示するかどうか"
-                          ]
+                          "enum": ["削除発言を表示するかどうか"]
                         }
                       ],
                       "minItems": 2,
@@ -1955,10 +1676,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -1975,17 +1693,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:見物人が内緒話を使える。"
-                          ]
+                          "enum": ["1:見物人が内緒話を使える。"]
                         }
                       ],
                       "minItems": 2,
@@ -1995,10 +1708,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -2015,17 +1725,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:投票・能力先に「ランダム」を含める"
-                          ]
+                          "enum": ["1:投票・能力先に「ランダム」を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -2035,17 +1740,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "0:ランダムイベント 1:順序通りのイベント"
-                          ]
+                          "enum": ["0:ランダムイベント 1:順序通りのイベント"]
                         }
                       ],
                       "minItems": 2,
@@ -2055,17 +1755,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:突然死あり"
-                          ]
+                          "enum": ["1:突然死あり"]
                         }
                       ],
                       "minItems": 2,
@@ -2075,17 +1770,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:自殺投票"
-                          ]
+                          "enum": ["1:自殺投票"]
                         }
                       ],
                       "minItems": 2,
@@ -2095,17 +1785,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:幽界トーク村を設定可能"
-                          ]
+                          "enum": ["1:幽界トーク村を設定可能"]
                         }
                       ],
                       "minItems": 2,
@@ -2115,17 +1800,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:勝利者表示をする。"
-                          ]
+                          "enum": ["1:勝利者表示をする。"]
                         }
                       ],
                       "minItems": 2,
@@ -2152,33 +1832,23 @@
                   "properties": {
                     "DIR_LIB": {
                       "type": "string",
-                      "enum": [
-                        "./lib"
-                      ]
+                      "enum": ["./lib"]
                     },
                     "DIR_HTML": {
                       "type": "string",
-                      "enum": [
-                        "./html"
-                      ]
+                      "enum": ["./html"]
                     },
                     "DIR_RS": {
                       "type": "string",
-                      "enum": [
-                        "./rs"
-                      ]
+                      "enum": ["./rs"]
                     },
                     "DIR_VIL": {
                       "type": "string",
-                      "enum": [
-                        "./data/vil"
-                      ]
+                      "enum": ["./data/vil"]
                     },
                     "DIR_USER": {
                       "type": "string",
-                      "enum": [
-                        "../data/user"
-                      ]
+                      "enum": ["../data/user"]
                     }
                   }
                 }
@@ -2367,10 +2037,7 @@
                         "type": "string"
                       },
                       "cd_default": {
-                        "enum": [
-                          "戦",
-                          "演"
-                        ],
+                        "enum": ["戦", "演"],
                         "type": "string"
                       },
                       "is_angular": {
@@ -2381,9 +2048,7 @@
                         "properties": {
                           "BASEDIR_CGI": {
                             "type": "string",
-                            "enum": [
-                              "."
-                            ]
+                            "enum": ["."]
                           },
                           "BASEDIR_CGIERR": {
                             "type": "string",
@@ -2393,9 +2058,7 @@
                           },
                           "BASEDIR_DAT": {
                             "type": "string",
-                            "enum": [
-                              "./data"
-                            ]
+                            "enum": ["./data"]
                           },
                           "BASEDIR_DOC": {
                             "type": "string",
@@ -2405,75 +2068,51 @@
                           },
                           "ENABLED_VMAKE": {
                             "type": "number",
-                            "enum": [
-                              0
-                            ]
+                            "enum": [0]
                           },
                           "MAX_LOG": {
                             "type": "number",
-                            "enum": [
-                              750
-                            ]
+                            "enum": [750]
                           },
                           "MAX_VILLAGES": {
                             "type": "number",
-                            "enum": [
-                              10
-                            ]
+                            "enum": [10]
                           },
                           "NAME_HOME": {
                             "type": "string",
-                            "enum": [
-                              "人狼議事 ロビー"
-                            ]
+                            "enum": ["人狼議事 ロビー"]
                           },
                           "RULE": {
                             "type": "string",
-                            "enum": [
-                              "LOBBY"
-                            ]
+                            "enum": ["LOBBY"]
                           },
                           "TIMEOUT_ENTRY": {
                             "type": "number",
-                            "enum": [
-                              3
-                            ]
+                            "enum": [3]
                           },
                           "TIMEOUT_SCRAP": {
                             "type": "number",
-                            "enum": [
-                              365
-                            ]
+                            "enum": [365]
                           },
                           "TOPPAGE_INFO": {
                             "type": "string",
-                            "enum": [
-                              "./_info.pl"
-                            ]
+                            "enum": ["./_info.pl"]
                           },
                           "TYPE": {
                             "type": "string",
-                            "enum": [
-                              "BRAID"
-                            ]
+                            "enum": ["BRAID"]
                           },
                           "URL_SW": {
                             "type": "string",
-                            "enum": [
-                              "http://dais.kokage.cc/guide_lobby/lobby"
-                            ]
+                            "enum": ["http://dais.kokage.cc/guide_lobby/lobby"]
                           },
                           "USERID_ADMIN": {
                             "type": "string",
-                            "enum": [
-                              "master"
-                            ]
+                            "enum": ["master"]
                           },
                           "USERID_NPC": {
                             "type": "string",
-                            "enum": [
-                              "master"
-                            ]
+                            "enum": ["master"]
                           }
                         }
                       },
@@ -2484,10 +2123,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  "anonymity",
-                                  "sign"
-                                ],
+                                "enum": ["anonymity", "sign"],
                                 "type": "string"
                               },
                               {
@@ -2504,10 +2140,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -2524,10 +2157,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -2544,10 +2174,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -2564,17 +2191,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "削除発言を表示するかどうか"
-                                ]
+                                "enum": ["削除発言を表示するかどうか"]
                               }
                             ],
                             "minItems": 2,
@@ -2584,10 +2206,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -2604,17 +2223,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:見物人が内緒話を使える。"
-                                ]
+                                "enum": ["1:見物人が内緒話を使える。"]
                               }
                             ],
                             "minItems": 2,
@@ -2624,10 +2238,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -2644,17 +2255,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:投票・能力先に「ランダム」を含める"
-                                ]
+                                "enum": ["1:投票・能力先に「ランダム」を含める"]
                               }
                             ],
                             "minItems": 2,
@@ -2664,10 +2270,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -2684,17 +2287,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:突然死あり"
-                                ]
+                                "enum": ["1:突然死あり"]
                               }
                             ],
                             "minItems": 2,
@@ -2704,17 +2302,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:自殺投票"
-                                ]
+                                "enum": ["1:自殺投票"]
                               }
                             ],
                             "minItems": 2,
@@ -2724,17 +2317,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:幽界トーク村を設定可能"
-                                ]
+                                "enum": ["1:幽界トーク村を設定可能"]
                               }
                             ],
                             "minItems": 2,
@@ -2744,17 +2332,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:勝利者表示をする。"
-                                ]
+                                "enum": ["1:勝利者表示をする。"]
                               }
                             ],
                             "minItems": 2,
@@ -2781,33 +2364,23 @@
                         "properties": {
                           "DIR_LIB": {
                             "type": "string",
-                            "enum": [
-                              "./lib"
-                            ]
+                            "enum": ["./lib"]
                           },
                           "DIR_HTML": {
                             "type": "string",
-                            "enum": [
-                              "./html"
-                            ]
+                            "enum": ["./html"]
                           },
                           "DIR_RS": {
                             "type": "string",
-                            "enum": [
-                              "./rs"
-                            ]
+                            "enum": ["./rs"]
                           },
                           "DIR_VIL": {
                             "type": "string",
-                            "enum": [
-                              "./data/vil"
-                            ]
+                            "enum": ["./data/vil"]
                           },
                           "DIR_USER": {
                             "type": "string",
-                            "enum": [
-                              "../data/user"
-                            ]
+                            "enum": ["../data/user"]
                           }
                         }
                       }
@@ -3118,10 +2691,7 @@
                     "type": "string"
                   },
                   {
-                    "enum": [
-                      "asc",
-                      "desc"
-                    ],
+                    "enum": ["asc", "desc"],
                     "type": "string"
                   }
                 ],
@@ -3200,10 +2770,7 @@
                   "type": "object",
                   "properties": {
                     "sow_auth_id": {
-                      "type": [
-                        "null",
-                        "string"
-                      ]
+                      "type": ["null", "string"]
                     }
                   }
                 },
@@ -3292,11 +2859,7 @@
                 "type": "object",
                 "properties": {
                   "group": {
-                    "enum": [
-                      "GM",
-                      "POTOF",
-                      "STATUS"
-                    ],
+                    "enum": ["GM", "POTOF", "STATUS"],
                     "type": "string"
                   },
                   "at": {
@@ -3350,11 +2913,7 @@
                   "text": {
                     "type": "array",
                     "items": {
-                      "enum": [
-                        "act",
-                        "memo",
-                        "talk"
-                      ],
+                      "enum": ["act", "memo", "talk"],
                       "type": "string"
                     }
                   }
@@ -3362,9 +2921,7 @@
               }
             },
             "cmd": {
-              "enum": [
-                "role"
-              ],
+              "enum": ["role"],
               "type": "string"
             },
             "able": {
@@ -3401,11 +2958,7 @@
                   "type": "object",
                   "properties": {
                     "group": {
-                      "enum": [
-                        "GM",
-                        "POTOF",
-                        "STATUS"
-                      ],
+                      "enum": ["GM", "POTOF", "STATUS"],
                       "type": "string"
                     },
                     "at": {
@@ -3459,11 +3012,7 @@
                     "text": {
                       "type": "array",
                       "items": {
-                        "enum": [
-                          "act",
-                          "memo",
-                          "talk"
-                        ],
+                        "enum": ["act", "memo", "talk"],
                         "type": "string"
                       }
                     }
@@ -3471,9 +3020,7 @@
                 }
               },
               "cmd": {
-                "enum": [
-                  "role"
-                ],
+                "enum": ["role"],
                 "type": "string"
               },
               "able": {
@@ -3500,11 +3047,7 @@
             "type": "object",
             "properties": {
               "group": {
-                "enum": [
-                  "GM",
-                  "POTOF",
-                  "STATUS"
-                ],
+                "enum": ["GM", "POTOF", "STATUS"],
                 "type": "string"
               },
               "at": {
@@ -3558,11 +3101,7 @@
               "text": {
                 "type": "array",
                 "items": {
-                  "enum": [
-                    "act",
-                    "memo",
-                    "talk"
-                  ],
+                  "enum": ["act", "memo", "talk"],
                   "type": "string"
                 }
               }
@@ -3733,10 +3272,7 @@
                         "type": "string"
                       },
                       "cd_default": {
-                        "enum": [
-                          "戦",
-                          "演"
-                        ],
+                        "enum": ["戦", "演"],
                         "type": "string"
                       },
                       "is_angular": {
@@ -3747,9 +3283,7 @@
                         "properties": {
                           "BASEDIR_CGI": {
                             "type": "string",
-                            "enum": [
-                              "."
-                            ]
+                            "enum": ["."]
                           },
                           "BASEDIR_CGIERR": {
                             "type": "string",
@@ -3759,9 +3293,7 @@
                           },
                           "BASEDIR_DAT": {
                             "type": "string",
-                            "enum": [
-                              "./data"
-                            ]
+                            "enum": ["./data"]
                           },
                           "BASEDIR_DOC": {
                             "type": "string",
@@ -3771,75 +3303,51 @@
                           },
                           "ENABLED_VMAKE": {
                             "type": "number",
-                            "enum": [
-                              0
-                            ]
+                            "enum": [0]
                           },
                           "MAX_LOG": {
                             "type": "number",
-                            "enum": [
-                              750
-                            ]
+                            "enum": [750]
                           },
                           "MAX_VILLAGES": {
                             "type": "number",
-                            "enum": [
-                              10
-                            ]
+                            "enum": [10]
                           },
                           "NAME_HOME": {
                             "type": "string",
-                            "enum": [
-                              "人狼議事 ロビー"
-                            ]
+                            "enum": ["人狼議事 ロビー"]
                           },
                           "RULE": {
                             "type": "string",
-                            "enum": [
-                              "LOBBY"
-                            ]
+                            "enum": ["LOBBY"]
                           },
                           "TIMEOUT_ENTRY": {
                             "type": "number",
-                            "enum": [
-                              3
-                            ]
+                            "enum": [3]
                           },
                           "TIMEOUT_SCRAP": {
                             "type": "number",
-                            "enum": [
-                              365
-                            ]
+                            "enum": [365]
                           },
                           "TOPPAGE_INFO": {
                             "type": "string",
-                            "enum": [
-                              "./_info.pl"
-                            ]
+                            "enum": ["./_info.pl"]
                           },
                           "TYPE": {
                             "type": "string",
-                            "enum": [
-                              "BRAID"
-                            ]
+                            "enum": ["BRAID"]
                           },
                           "URL_SW": {
                             "type": "string",
-                            "enum": [
-                              "http://dais.kokage.cc/guide_lobby/lobby"
-                            ]
+                            "enum": ["http://dais.kokage.cc/guide_lobby/lobby"]
                           },
                           "USERID_ADMIN": {
                             "type": "string",
-                            "enum": [
-                              "master"
-                            ]
+                            "enum": ["master"]
                           },
                           "USERID_NPC": {
                             "type": "string",
-                            "enum": [
-                              "master"
-                            ]
+                            "enum": ["master"]
                           }
                         }
                       },
@@ -3850,10 +3358,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  "anonymity",
-                                  "sign"
-                                ],
+                                "enum": ["anonymity", "sign"],
                                 "type": "string"
                               },
                               {
@@ -3870,10 +3375,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -3890,10 +3392,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -3910,10 +3409,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -3930,17 +3426,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "削除発言を表示するかどうか"
-                                ]
+                                "enum": ["削除発言を表示するかどうか"]
                               }
                             ],
                             "minItems": 2,
@@ -3950,10 +3441,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -3970,17 +3458,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:見物人が内緒話を使える。"
-                                ]
+                                "enum": ["1:見物人が内緒話を使える。"]
                               }
                             ],
                             "minItems": 2,
@@ -3990,10 +3473,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -4010,17 +3490,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:投票・能力先に「ランダム」を含める"
-                                ]
+                                "enum": ["1:投票・能力先に「ランダム」を含める"]
                               }
                             ],
                             "minItems": 2,
@@ -4030,10 +3505,7 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
@@ -4050,17 +3522,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:突然死あり"
-                                ]
+                                "enum": ["1:突然死あり"]
                               }
                             ],
                             "minItems": 2,
@@ -4070,17 +3537,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:自殺投票"
-                                ]
+                                "enum": ["1:自殺投票"]
                               }
                             ],
                             "minItems": 2,
@@ -4090,17 +3552,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:幽界トーク村を設定可能"
-                                ]
+                                "enum": ["1:幽界トーク村を設定可能"]
                               }
                             ],
                             "minItems": 2,
@@ -4110,17 +3567,12 @@
                             "type": "array",
                             "items": [
                               {
-                                "enum": [
-                                  0,
-                                  1
-                                ],
+                                "enum": [0, 1],
                                 "type": "number"
                               },
                               {
                                 "type": "string",
-                                "enum": [
-                                  "1:勝利者表示をする。"
-                                ]
+                                "enum": ["1:勝利者表示をする。"]
                               }
                             ],
                             "minItems": 2,
@@ -4147,33 +3599,23 @@
                         "properties": {
                           "DIR_LIB": {
                             "type": "string",
-                            "enum": [
-                              "./lib"
-                            ]
+                            "enum": ["./lib"]
                           },
                           "DIR_HTML": {
                             "type": "string",
-                            "enum": [
-                              "./html"
-                            ]
+                            "enum": ["./html"]
                           },
                           "DIR_RS": {
                             "type": "string",
-                            "enum": [
-                              "./rs"
-                            ]
+                            "enum": ["./rs"]
                           },
                           "DIR_VIL": {
                             "type": "string",
-                            "enum": [
-                              "./data/vil"
-                            ]
+                            "enum": ["./data/vil"]
                           },
                           "DIR_USER": {
                             "type": "string",
-                            "enum": [
-                              "../data/user"
-                            ]
+                            "enum": ["../data/user"]
                           }
                         }
                       }
@@ -4191,11 +3633,7 @@
                 "type": "object",
                 "properties": {
                   "group": {
-                    "enum": [
-                      "GM",
-                      "POTOF",
-                      "STATUS"
-                    ],
+                    "enum": ["GM", "POTOF", "STATUS"],
                     "type": "string"
                   },
                   "at": {
@@ -4249,11 +3687,7 @@
                   "text": {
                     "type": "array",
                     "items": {
-                      "enum": [
-                        "act",
-                        "memo",
-                        "talk"
-                      ],
+                      "enum": ["act", "memo", "talk"],
                       "type": "string"
                     }
                   }
@@ -4491,10 +3925,7 @@
                   "type": "string"
                 },
                 "cd_default": {
-                  "enum": [
-                    "戦",
-                    "演"
-                  ],
+                  "enum": ["戦", "演"],
                   "type": "string"
                 },
                 "is_angular": {
@@ -4505,9 +3936,7 @@
                   "properties": {
                     "BASEDIR_CGI": {
                       "type": "string",
-                      "enum": [
-                        "."
-                      ]
+                      "enum": ["."]
                     },
                     "BASEDIR_CGIERR": {
                       "type": "string",
@@ -4517,9 +3946,7 @@
                     },
                     "BASEDIR_DAT": {
                       "type": "string",
-                      "enum": [
-                        "./data"
-                      ]
+                      "enum": ["./data"]
                     },
                     "BASEDIR_DOC": {
                       "type": "string",
@@ -4529,75 +3956,51 @@
                     },
                     "ENABLED_VMAKE": {
                       "type": "number",
-                      "enum": [
-                        0
-                      ]
+                      "enum": [0]
                     },
                     "MAX_LOG": {
                       "type": "number",
-                      "enum": [
-                        750
-                      ]
+                      "enum": [750]
                     },
                     "MAX_VILLAGES": {
                       "type": "number",
-                      "enum": [
-                        10
-                      ]
+                      "enum": [10]
                     },
                     "NAME_HOME": {
                       "type": "string",
-                      "enum": [
-                        "人狼議事 ロビー"
-                      ]
+                      "enum": ["人狼議事 ロビー"]
                     },
                     "RULE": {
                       "type": "string",
-                      "enum": [
-                        "LOBBY"
-                      ]
+                      "enum": ["LOBBY"]
                     },
                     "TIMEOUT_ENTRY": {
                       "type": "number",
-                      "enum": [
-                        3
-                      ]
+                      "enum": [3]
                     },
                     "TIMEOUT_SCRAP": {
                       "type": "number",
-                      "enum": [
-                        365
-                      ]
+                      "enum": [365]
                     },
                     "TOPPAGE_INFO": {
                       "type": "string",
-                      "enum": [
-                        "./_info.pl"
-                      ]
+                      "enum": ["./_info.pl"]
                     },
                     "TYPE": {
                       "type": "string",
-                      "enum": [
-                        "BRAID"
-                      ]
+                      "enum": ["BRAID"]
                     },
                     "URL_SW": {
                       "type": "string",
-                      "enum": [
-                        "http://dais.kokage.cc/guide_lobby/lobby"
-                      ]
+                      "enum": ["http://dais.kokage.cc/guide_lobby/lobby"]
                     },
                     "USERID_ADMIN": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     },
                     "USERID_NPC": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     }
                   }
                 },
@@ -4608,10 +4011,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            "anonymity",
-                            "sign"
-                          ],
+                          "enum": ["anonymity", "sign"],
                           "type": "string"
                         },
                         {
@@ -4628,17 +4028,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:対象を指定した発言（内緒話）を含める"
-                          ]
+                          "enum": ["1:対象を指定した発言（内緒話）を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -4648,10 +4043,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -4668,17 +4060,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "少女や交霊者ののぞきみがひらがなのみ。"
-                          ]
+                          "enum": ["少女や交霊者ののぞきみがひらがなのみ。"]
                         }
                       ],
                       "minItems": 2,
@@ -4688,17 +4075,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "削除発言を表示するかどうか"
-                          ]
+                          "enum": ["削除発言を表示するかどうか"]
                         }
                       ],
                       "minItems": 2,
@@ -4708,10 +4090,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -4728,17 +4107,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:見物人が内緒話を使える。"
-                          ]
+                          "enum": ["1:見物人が内緒話を使える。"]
                         }
                       ],
                       "minItems": 2,
@@ -4748,10 +4122,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -4768,17 +4139,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:投票・能力先に「ランダム」を含める"
-                          ]
+                          "enum": ["1:投票・能力先に「ランダム」を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -4788,17 +4154,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "0:ランダムイベント 1:順序通りのイベント"
-                          ]
+                          "enum": ["0:ランダムイベント 1:順序通りのイベント"]
                         }
                       ],
                       "minItems": 2,
@@ -4808,17 +4169,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:突然死あり"
-                          ]
+                          "enum": ["1:突然死あり"]
                         }
                       ],
                       "minItems": 2,
@@ -4828,17 +4184,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:自殺投票"
-                          ]
+                          "enum": ["1:自殺投票"]
                         }
                       ],
                       "minItems": 2,
@@ -4848,17 +4199,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:幽界トーク村を設定可能"
-                          ]
+                          "enum": ["1:幽界トーク村を設定可能"]
                         }
                       ],
                       "minItems": 2,
@@ -4868,17 +4214,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:勝利者表示をする。"
-                          ]
+                          "enum": ["1:勝利者表示をする。"]
                         }
                       ],
                       "minItems": 2,
@@ -4905,33 +4246,23 @@
                   "properties": {
                     "DIR_LIB": {
                       "type": "string",
-                      "enum": [
-                        "./lib"
-                      ]
+                      "enum": ["./lib"]
                     },
                     "DIR_HTML": {
                       "type": "string",
-                      "enum": [
-                        "./html"
-                      ]
+                      "enum": ["./html"]
                     },
                     "DIR_RS": {
                       "type": "string",
-                      "enum": [
-                        "./rs"
-                      ]
+                      "enum": ["./rs"]
                     },
                     "DIR_VIL": {
                       "type": "string",
-                      "enum": [
-                        "./data/vil"
-                      ]
+                      "enum": ["./data/vil"]
                     },
                     "DIR_USER": {
                       "type": "string",
-                      "enum": [
-                        "../data/user"
-                      ]
+                      "enum": ["../data/user"]
                     }
                   }
                 }
@@ -4954,11 +4285,7 @@
                 "type": "object",
                 "properties": {
                   "group": {
-                    "enum": [
-                      "GM",
-                      "POTOF",
-                      "STATUS"
-                    ],
+                    "enum": ["GM", "POTOF", "STATUS"],
                     "type": "string"
                   },
                   "at": {
@@ -5012,11 +4339,7 @@
                   "text": {
                     "type": "array",
                     "items": {
-                      "enum": [
-                        "act",
-                        "memo",
-                        "talk"
-                      ],
+                      "enum": ["act", "memo", "talk"],
                       "type": "string"
                     }
                   }
@@ -5024,9 +4347,7 @@
               }
             },
             "cmd": {
-              "enum": [
-                "role"
-              ],
+              "enum": ["role"],
               "type": "string"
             },
             "able": {
@@ -5211,10 +4532,7 @@
                       "type": "string"
                     },
                     "cd_default": {
-                      "enum": [
-                        "戦",
-                        "演"
-                      ],
+                      "enum": ["戦", "演"],
                       "type": "string"
                     },
                     "is_angular": {
@@ -5225,9 +4543,7 @@
                       "properties": {
                         "BASEDIR_CGI": {
                           "type": "string",
-                          "enum": [
-                            "."
-                          ]
+                          "enum": ["."]
                         },
                         "BASEDIR_CGIERR": {
                           "type": "string",
@@ -5237,9 +4553,7 @@
                         },
                         "BASEDIR_DAT": {
                           "type": "string",
-                          "enum": [
-                            "./data"
-                          ]
+                          "enum": ["./data"]
                         },
                         "BASEDIR_DOC": {
                           "type": "string",
@@ -5249,75 +4563,51 @@
                         },
                         "ENABLED_VMAKE": {
                           "type": "number",
-                          "enum": [
-                            0
-                          ]
+                          "enum": [0]
                         },
                         "MAX_LOG": {
                           "type": "number",
-                          "enum": [
-                            750
-                          ]
+                          "enum": [750]
                         },
                         "MAX_VILLAGES": {
                           "type": "number",
-                          "enum": [
-                            10
-                          ]
+                          "enum": [10]
                         },
                         "NAME_HOME": {
                           "type": "string",
-                          "enum": [
-                            "人狼議事 ロビー"
-                          ]
+                          "enum": ["人狼議事 ロビー"]
                         },
                         "RULE": {
                           "type": "string",
-                          "enum": [
-                            "LOBBY"
-                          ]
+                          "enum": ["LOBBY"]
                         },
                         "TIMEOUT_ENTRY": {
                           "type": "number",
-                          "enum": [
-                            3
-                          ]
+                          "enum": [3]
                         },
                         "TIMEOUT_SCRAP": {
                           "type": "number",
-                          "enum": [
-                            365
-                          ]
+                          "enum": [365]
                         },
                         "TOPPAGE_INFO": {
                           "type": "string",
-                          "enum": [
-                            "./_info.pl"
-                          ]
+                          "enum": ["./_info.pl"]
                         },
                         "TYPE": {
                           "type": "string",
-                          "enum": [
-                            "BRAID"
-                          ]
+                          "enum": ["BRAID"]
                         },
                         "URL_SW": {
                           "type": "string",
-                          "enum": [
-                            "http://dais.kokage.cc/guide_lobby/lobby"
-                          ]
+                          "enum": ["http://dais.kokage.cc/guide_lobby/lobby"]
                         },
                         "USERID_ADMIN": {
                           "type": "string",
-                          "enum": [
-                            "master"
-                          ]
+                          "enum": ["master"]
                         },
                         "USERID_NPC": {
                           "type": "string",
-                          "enum": [
-                            "master"
-                          ]
+                          "enum": ["master"]
                         }
                       }
                     },
@@ -5328,10 +4618,7 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                "anonymity",
-                                "sign"
-                              ],
+                              "enum": ["anonymity", "sign"],
                               "type": "string"
                             },
                             {
@@ -5348,17 +4635,12 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
                               "type": "string",
-                              "enum": [
-                                "1:対象を指定した発言（内緒話）を含める"
-                              ]
+                              "enum": ["1:対象を指定した発言（内緒話）を含める"]
                             }
                           ],
                           "minItems": 2,
@@ -5368,10 +4650,7 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
@@ -5388,17 +4667,12 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
                               "type": "string",
-                              "enum": [
-                                "少女や交霊者ののぞきみがひらがなのみ。"
-                              ]
+                              "enum": ["少女や交霊者ののぞきみがひらがなのみ。"]
                             }
                           ],
                           "minItems": 2,
@@ -5408,17 +4682,12 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
                               "type": "string",
-                              "enum": [
-                                "削除発言を表示するかどうか"
-                              ]
+                              "enum": ["削除発言を表示するかどうか"]
                             }
                           ],
                           "minItems": 2,
@@ -5428,10 +4697,7 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
@@ -5448,17 +4714,12 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
                               "type": "string",
-                              "enum": [
-                                "1:見物人が内緒話を使える。"
-                              ]
+                              "enum": ["1:見物人が内緒話を使える。"]
                             }
                           ],
                           "minItems": 2,
@@ -5468,10 +4729,7 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
@@ -5488,17 +4746,12 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
                               "type": "string",
-                              "enum": [
-                                "1:投票・能力先に「ランダム」を含める"
-                              ]
+                              "enum": ["1:投票・能力先に「ランダム」を含める"]
                             }
                           ],
                           "minItems": 2,
@@ -5508,10 +4761,7 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
@@ -5528,17 +4778,12 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
                               "type": "string",
-                              "enum": [
-                                "1:突然死あり"
-                              ]
+                              "enum": ["1:突然死あり"]
                             }
                           ],
                           "minItems": 2,
@@ -5548,17 +4793,12 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
                               "type": "string",
-                              "enum": [
-                                "1:自殺投票"
-                              ]
+                              "enum": ["1:自殺投票"]
                             }
                           ],
                           "minItems": 2,
@@ -5568,17 +4808,12 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
                               "type": "string",
-                              "enum": [
-                                "1:幽界トーク村を設定可能"
-                              ]
+                              "enum": ["1:幽界トーク村を設定可能"]
                             }
                           ],
                           "minItems": 2,
@@ -5588,17 +4823,12 @@
                           "type": "array",
                           "items": [
                             {
-                              "enum": [
-                                0,
-                                1
-                              ],
+                              "enum": [0, 1],
                               "type": "number"
                             },
                             {
                               "type": "string",
-                              "enum": [
-                                "1:勝利者表示をする。"
-                              ]
+                              "enum": ["1:勝利者表示をする。"]
                             }
                           ],
                           "minItems": 2,
@@ -5625,33 +4855,23 @@
                       "properties": {
                         "DIR_LIB": {
                           "type": "string",
-                          "enum": [
-                            "./lib"
-                          ]
+                          "enum": ["./lib"]
                         },
                         "DIR_HTML": {
                           "type": "string",
-                          "enum": [
-                            "./html"
-                          ]
+                          "enum": ["./html"]
                         },
                         "DIR_RS": {
                           "type": "string",
-                          "enum": [
-                            "./rs"
-                          ]
+                          "enum": ["./rs"]
                         },
                         "DIR_VIL": {
                           "type": "string",
-                          "enum": [
-                            "./data/vil"
-                          ]
+                          "enum": ["./data/vil"]
                         },
                         "DIR_USER": {
                           "type": "string",
-                          "enum": [
-                            "../data/user"
-                          ]
+                          "enum": ["../data/user"]
                         }
                       }
                     }
@@ -5945,10 +5165,7 @@
                   "type": "string"
                 },
                 "cd_default": {
-                  "enum": [
-                    "戦",
-                    "演"
-                  ],
+                  "enum": ["戦", "演"],
                   "type": "string"
                 },
                 "is_angular": {
@@ -5959,9 +5176,7 @@
                   "properties": {
                     "BASEDIR_CGI": {
                       "type": "string",
-                      "enum": [
-                        "."
-                      ]
+                      "enum": ["."]
                     },
                     "BASEDIR_CGIERR": {
                       "type": "string",
@@ -5971,9 +5186,7 @@
                     },
                     "BASEDIR_DAT": {
                       "type": "string",
-                      "enum": [
-                        "./data"
-                      ]
+                      "enum": ["./data"]
                     },
                     "BASEDIR_DOC": {
                       "type": "string",
@@ -5983,75 +5196,51 @@
                     },
                     "ENABLED_VMAKE": {
                       "type": "number",
-                      "enum": [
-                        0
-                      ]
+                      "enum": [0]
                     },
                     "MAX_LOG": {
                       "type": "number",
-                      "enum": [
-                        750
-                      ]
+                      "enum": [750]
                     },
                     "MAX_VILLAGES": {
                       "type": "number",
-                      "enum": [
-                        10
-                      ]
+                      "enum": [10]
                     },
                     "NAME_HOME": {
                       "type": "string",
-                      "enum": [
-                        "人狼議事 ロビー"
-                      ]
+                      "enum": ["人狼議事 ロビー"]
                     },
                     "RULE": {
                       "type": "string",
-                      "enum": [
-                        "LOBBY"
-                      ]
+                      "enum": ["LOBBY"]
                     },
                     "TIMEOUT_ENTRY": {
                       "type": "number",
-                      "enum": [
-                        3
-                      ]
+                      "enum": [3]
                     },
                     "TIMEOUT_SCRAP": {
                       "type": "number",
-                      "enum": [
-                        365
-                      ]
+                      "enum": [365]
                     },
                     "TOPPAGE_INFO": {
                       "type": "string",
-                      "enum": [
-                        "./_info.pl"
-                      ]
+                      "enum": ["./_info.pl"]
                     },
                     "TYPE": {
                       "type": "string",
-                      "enum": [
-                        "BRAID"
-                      ]
+                      "enum": ["BRAID"]
                     },
                     "URL_SW": {
                       "type": "string",
-                      "enum": [
-                        "http://dais.kokage.cc/guide_lobby/lobby"
-                      ]
+                      "enum": ["http://dais.kokage.cc/guide_lobby/lobby"]
                     },
                     "USERID_ADMIN": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     },
                     "USERID_NPC": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     }
                   }
                 },
@@ -6062,10 +5251,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            "anonymity",
-                            "sign"
-                          ],
+                          "enum": ["anonymity", "sign"],
                           "type": "string"
                         },
                         {
@@ -6082,17 +5268,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:対象を指定した発言（内緒話）を含める"
-                          ]
+                          "enum": ["1:対象を指定した発言（内緒話）を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -6102,10 +5283,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -6122,17 +5300,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "少女や交霊者ののぞきみがひらがなのみ。"
-                          ]
+                          "enum": ["少女や交霊者ののぞきみがひらがなのみ。"]
                         }
                       ],
                       "minItems": 2,
@@ -6142,17 +5315,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "削除発言を表示するかどうか"
-                          ]
+                          "enum": ["削除発言を表示するかどうか"]
                         }
                       ],
                       "minItems": 2,
@@ -6162,10 +5330,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -6182,17 +5347,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:見物人が内緒話を使える。"
-                          ]
+                          "enum": ["1:見物人が内緒話を使える。"]
                         }
                       ],
                       "minItems": 2,
@@ -6202,10 +5362,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -6222,17 +5379,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:投票・能力先に「ランダム」を含める"
-                          ]
+                          "enum": ["1:投票・能力先に「ランダム」を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -6242,17 +5394,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "0:ランダムイベント 1:順序通りのイベント"
-                          ]
+                          "enum": ["0:ランダムイベント 1:順序通りのイベント"]
                         }
                       ],
                       "minItems": 2,
@@ -6262,17 +5409,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:突然死あり"
-                          ]
+                          "enum": ["1:突然死あり"]
                         }
                       ],
                       "minItems": 2,
@@ -6282,17 +5424,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:自殺投票"
-                          ]
+                          "enum": ["1:自殺投票"]
                         }
                       ],
                       "minItems": 2,
@@ -6302,17 +5439,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:幽界トーク村を設定可能"
-                          ]
+                          "enum": ["1:幽界トーク村を設定可能"]
                         }
                       ],
                       "minItems": 2,
@@ -6322,17 +5454,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:勝利者表示をする。"
-                          ]
+                          "enum": ["1:勝利者表示をする。"]
                         }
                       ],
                       "minItems": 2,
@@ -6359,33 +5486,23 @@
                   "properties": {
                     "DIR_LIB": {
                       "type": "string",
-                      "enum": [
-                        "./lib"
-                      ]
+                      "enum": ["./lib"]
                     },
                     "DIR_HTML": {
                       "type": "string",
-                      "enum": [
-                        "./html"
-                      ]
+                      "enum": ["./html"]
                     },
                     "DIR_RS": {
                       "type": "string",
-                      "enum": [
-                        "./rs"
-                      ]
+                      "enum": ["./rs"]
                     },
                     "DIR_VIL": {
                       "type": "string",
-                      "enum": [
-                        "./data/vil"
-                      ]
+                      "enum": ["./data/vil"]
                     },
                     "DIR_USER": {
                       "type": "string",
-                      "enum": [
-                        "../data/user"
-                      ]
+                      "enum": ["../data/user"]
                     }
                   }
                 }
@@ -6403,11 +5520,7 @@
           "type": "object",
           "properties": {
             "group": {
-              "enum": [
-                "GM",
-                "POTOF",
-                "STATUS"
-              ],
+              "enum": ["GM", "POTOF", "STATUS"],
               "type": "string"
             },
             "at": {
@@ -6461,11 +5574,7 @@
             "text": {
               "type": "array",
               "items": {
-                "enum": [
-                  "act",
-                  "memo",
-                  "talk"
-                ],
+                "enum": ["act", "memo", "talk"],
                 "type": "string"
               }
             }
@@ -6653,10 +5762,7 @@
                   "type": "string"
                 },
                 "cd_default": {
-                  "enum": [
-                    "戦",
-                    "演"
-                  ],
+                  "enum": ["戦", "演"],
                   "type": "string"
                 },
                 "is_angular": {
@@ -6667,9 +5773,7 @@
                   "properties": {
                     "BASEDIR_CGI": {
                       "type": "string",
-                      "enum": [
-                        "."
-                      ]
+                      "enum": ["."]
                     },
                     "BASEDIR_CGIERR": {
                       "type": "string",
@@ -6679,9 +5783,7 @@
                     },
                     "BASEDIR_DAT": {
                       "type": "string",
-                      "enum": [
-                        "./data"
-                      ]
+                      "enum": ["./data"]
                     },
                     "BASEDIR_DOC": {
                       "type": "string",
@@ -6691,75 +5793,51 @@
                     },
                     "ENABLED_VMAKE": {
                       "type": "number",
-                      "enum": [
-                        0
-                      ]
+                      "enum": [0]
                     },
                     "MAX_LOG": {
                       "type": "number",
-                      "enum": [
-                        750
-                      ]
+                      "enum": [750]
                     },
                     "MAX_VILLAGES": {
                       "type": "number",
-                      "enum": [
-                        10
-                      ]
+                      "enum": [10]
                     },
                     "NAME_HOME": {
                       "type": "string",
-                      "enum": [
-                        "人狼議事 ロビー"
-                      ]
+                      "enum": ["人狼議事 ロビー"]
                     },
                     "RULE": {
                       "type": "string",
-                      "enum": [
-                        "LOBBY"
-                      ]
+                      "enum": ["LOBBY"]
                     },
                     "TIMEOUT_ENTRY": {
                       "type": "number",
-                      "enum": [
-                        3
-                      ]
+                      "enum": [3]
                     },
                     "TIMEOUT_SCRAP": {
                       "type": "number",
-                      "enum": [
-                        365
-                      ]
+                      "enum": [365]
                     },
                     "TOPPAGE_INFO": {
                       "type": "string",
-                      "enum": [
-                        "./_info.pl"
-                      ]
+                      "enum": ["./_info.pl"]
                     },
                     "TYPE": {
                       "type": "string",
-                      "enum": [
-                        "BRAID"
-                      ]
+                      "enum": ["BRAID"]
                     },
                     "URL_SW": {
                       "type": "string",
-                      "enum": [
-                        "http://dais.kokage.cc/guide_lobby/lobby"
-                      ]
+                      "enum": ["http://dais.kokage.cc/guide_lobby/lobby"]
                     },
                     "USERID_ADMIN": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     },
                     "USERID_NPC": {
                       "type": "string",
-                      "enum": [
-                        "master"
-                      ]
+                      "enum": ["master"]
                     }
                   }
                 },
@@ -6770,10 +5848,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            "anonymity",
-                            "sign"
-                          ],
+                          "enum": ["anonymity", "sign"],
                           "type": "string"
                         },
                         {
@@ -6790,17 +5865,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:対象を指定した発言（内緒話）を含める"
-                          ]
+                          "enum": ["1:対象を指定した発言（内緒話）を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -6810,10 +5880,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -6830,17 +5897,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "少女や交霊者ののぞきみがひらがなのみ。"
-                          ]
+                          "enum": ["少女や交霊者ののぞきみがひらがなのみ。"]
                         }
                       ],
                       "minItems": 2,
@@ -6850,17 +5912,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "削除発言を表示するかどうか"
-                          ]
+                          "enum": ["削除発言を表示するかどうか"]
                         }
                       ],
                       "minItems": 2,
@@ -6870,10 +5927,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -6890,17 +5944,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:見物人が内緒話を使える。"
-                          ]
+                          "enum": ["1:見物人が内緒話を使える。"]
                         }
                       ],
                       "minItems": 2,
@@ -6910,10 +5959,7 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
@@ -6930,17 +5976,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:投票・能力先に「ランダム」を含める"
-                          ]
+                          "enum": ["1:投票・能力先に「ランダム」を含める"]
                         }
                       ],
                       "minItems": 2,
@@ -6950,17 +5991,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "0:ランダムイベント 1:順序通りのイベント"
-                          ]
+                          "enum": ["0:ランダムイベント 1:順序通りのイベント"]
                         }
                       ],
                       "minItems": 2,
@@ -6970,17 +6006,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:突然死あり"
-                          ]
+                          "enum": ["1:突然死あり"]
                         }
                       ],
                       "minItems": 2,
@@ -6990,17 +6021,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:自殺投票"
-                          ]
+                          "enum": ["1:自殺投票"]
                         }
                       ],
                       "minItems": 2,
@@ -7010,17 +6036,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:幽界トーク村を設定可能"
-                          ]
+                          "enum": ["1:幽界トーク村を設定可能"]
                         }
                       ],
                       "minItems": 2,
@@ -7030,17 +6051,12 @@
                       "type": "array",
                       "items": [
                         {
-                          "enum": [
-                            0,
-                            1
-                          ],
+                          "enum": [0, 1],
                           "type": "number"
                         },
                         {
                           "type": "string",
-                          "enum": [
-                            "1:勝利者表示をする。"
-                          ]
+                          "enum": ["1:勝利者表示をする。"]
                         }
                       ],
                       "minItems": 2,
@@ -7067,33 +6083,23 @@
                   "properties": {
                     "DIR_LIB": {
                       "type": "string",
-                      "enum": [
-                        "./lib"
-                      ]
+                      "enum": ["./lib"]
                     },
                     "DIR_HTML": {
                       "type": "string",
-                      "enum": [
-                        "./html"
-                      ]
+                      "enum": ["./html"]
                     },
                     "DIR_RS": {
                       "type": "string",
-                      "enum": [
-                        "./rs"
-                      ]
+                      "enum": ["./rs"]
                     },
                     "DIR_VIL": {
                       "type": "string",
-                      "enum": [
-                        "./data/vil"
-                      ]
+                      "enum": ["./data/vil"]
                     },
                     "DIR_USER": {
                       "type": "string",
-                      "enum": [
-                        "../data/user"
-                      ]
+                      "enum": ["../data/user"]
                     }
                   }
                 }
